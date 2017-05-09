@@ -11,17 +11,18 @@ var webpack = require('webpack');
 module.exports = {
 
   output: {
-    filename: 'main.js',
+    filename: '[name].js',
     publicPath: '/assets/'
   },
 
   cache: true,
   debug: true,
   devtool: false,
-  entry: [
-      'webpack/hot/only-dev-server',
-      './src/components/main.js'
-  ],
+  entry: {
+      hot: 'webpack/hot/only-dev-server',
+      main: './src/components/main.js',
+      vendor: ['react', 'react-dom', 'prop-types', 'antd/lib/tabs', 'antd/lib/collapse', 'jquery', 'antd/dist/antd.css']
+  },
 
   stats: {
     colors: true,
@@ -65,7 +66,10 @@ module.exports = {
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    // ["import", { libraryName: "antd", style: "css" }]
+    new webpack.optimize.CommonsChunkPlugin({
+        name: 'vendor',
+        filename: 'vendor.js'
+    })    
   ]
 
 };

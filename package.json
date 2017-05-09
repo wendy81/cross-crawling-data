@@ -11,9 +11,9 @@
   "mainOutput": "main",
   "dependencies": {
     "cheerio": "^0.22.0",
-    "normalize.css": "~3.0.3",
-    "react": "^0.14.x",
-    "react-dom": "^0.14.x",
+    "prop-types": "^15.5.8",
+    "react": "^0.14.9",
+    "react-dom": "^0.14.9",
     "urlencode2": "^1.0.1"
   },
   "scripts": {
@@ -24,6 +24,7 @@
     "autoprefixer": "^6.7.7",
     "babel": "^5.0.0",
     "babel-loader": "^5.0.0",
+    "babel-plugin-import": "^1.1.1",
     "clean-webpack-plugin": "^0.1.16",
     "css-loader": "~0.9.0",
     "eslint": "^0.21.2",

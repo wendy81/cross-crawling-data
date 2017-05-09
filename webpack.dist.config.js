@@ -13,12 +13,15 @@ module.exports = {
   output: {
     publicPath: '/assets/',
     path: 'dist/assets/',
-    filename: 'main.js'
+    filename: '[name].js'
   },
 
   debug: false,
   devtool: false,
-  entry: './src/components/main.js',
+  entry: {
+          main: './src/components/main.js',
+          vendor: ['react', 'react-dom', 'prop-types', 'antd/lib/tabs', 'antd/lib/collapse', 'jquery', 'antd/dist/antd.css']
+         },
 
   stats: {
     colors: true,

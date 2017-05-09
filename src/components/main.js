@@ -1,25 +1,20 @@
 'use strict';
 const React = require('react');
 const ReactDOM = require('react-dom');
+const PropTypes = require('prop-types');
 
-const { Tabs, Collapse, Spin} = require('antd');
+import Tabs from 'antd/lib/tabs';
+import Collapse from 'antd/lib/collapse';
+// import { Spin } from 'antd';
 const TabPane = Tabs.TabPane;
 const Panel = Collapse.Panel;
+require('antd/dist/antd.css');
 
 const $ = require('jquery');
-
-require('antd/dist/antd.css');
 
 class Main extends React.Component {
 	constructor(props) {
 		super(props);
-	}
-	chagenActive (v, e) {
-		e.preventDefault();
-		console.log('000000');
-		if(this.props.currentTab(v) !== undefined) {
-			this.props.currentTab(v);
-		}
 	}
 	render() {
 		let tabData = ['daily', 'weekly', 'monthly'];
@@ -38,6 +33,12 @@ class Main extends React.Component {
 		);
 	}
 }
+/*
+* 用来解决在 react@0.14.9 react-dom@0.14.9中对 propsType的验证提示
+*/
+Main.propTypes = {
+  defaultActiveKey: PropTypes.string
+};
 
 class List extends React.Component {
 	constructor(props) { //初始化this.state
@@ -95,16 +96,16 @@ class List extends React.Component {
 		let dataCon = JSON.parse(page);
 		let dataArry = [];
 
-		if(dataCon[0]) {
+		// if(dataCon[0]) {
 			dataCon.map(function(v, i) {
 				let index = i + 1;
 				let listHtml = <Panel header={v.aHrefText} key={index} style={customPanelStyle}>
 					<p>{v.des}</p>
 					</Panel>;
 				dataArry.push(listHtml); });
-		} else {
-			dataArry.push(<Spin />);
-		}
+		// } else {
+		// 	dataArry.push(<Spin />);
+		// }
 		return (
 			<Collapse style={{margin: '20px', marginTop: '-10px', broderTop: '#fff 1px solid'}} bordered={true} defaultActiveKey={['1']}>{dataArry}</Collapse>
 		);
