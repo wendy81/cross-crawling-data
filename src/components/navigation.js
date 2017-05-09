@@ -3,10 +3,11 @@
 const React = require('react');
 const { Tabs } = require('antd');
 const TabPane = Tabs.TabPane;
+const List = require('./list');
 
 require('antd/dist/antd.css');
 
-class Nav extends React.Component {
+class Main extends React.Component {
 	constructor(props) {
 		super(props);
 	}
@@ -20,7 +21,7 @@ class Nav extends React.Component {
 	render() {
 		tabData.map((v, i) => {
 			let listHtml;
-			listHtml = <TabPane tab={v} key={i}>{this.props.ulHtml}</TabPane>;
+			listHtml = <TabPane tab={v} key={i}><List currentTab = {this.props.tabActive}/></TabPane>;
 			tabList.push(listHtml);
 		});
 		return (
@@ -30,4 +31,9 @@ class Nav extends React.Component {
 		);
 	}
 }
-export default Nav;
+
+ReactDOM.render(
+	<Main />,
+    document.getElementById('content')
+);
+

@@ -1,23 +1,52 @@
 'use strict';
-
 const React = require('react');
 const ReactDOM = require('react-dom');
-const $ = require('jquery');
-const Navigation = require('./navigation');
-const { Collapse } = require('antd');
+
+const { Tabs, Collapse, Spin} = require('antd');
+const TabPane = Tabs.TabPane;
 const Panel = Collapse.Panel;
+
+const $ = require('jquery');
 
 require('antd/dist/antd.css');
 
 class Main extends React.Component {
+	constructor(props) {
+		super(props);
+	}
+	chagenActive (v, e) {
+		e.preventDefault();
+		console.log('000000');
+		if(this.props.currentTab(v) !== undefined) {
+			this.props.currentTab(v);
+		}
+	}
+	render() {
+		let tabData = ['daily', 'weekly', 'monthly'];
+		let tabList = [];
+		tabData.map((v, i) => {
+			let listHtml;
+			listHtml = <TabPane tab={v} key={i}>
+				<List currentTab = {v}/>
+			</TabPane>;
+			tabList.push(listHtml);
+		});
+		return (
+			<Tabs defaultActiveKey="0">
+				{tabList}
+			</Tabs>
+		);
+	}
+}
+
+class List extends React.Component {
 	constructor(props) { //初始化this.state
 		super(props);
-		this.state = {loading: true, error: null, data: null, defatultTab: 'weekly'};
-		this.changeCuurentTab = this.changeCuurentTab.bind(this);
+		this.state = {loading: true, error: null, data: null};
 	}
 	//初始化渲染执行之后立刻调用一次
 	componentDidMount() {
-		let source = $.get('http://localhost:8888/src/components/server.js?since=' + this.state.defatultTab );
+		let source = $.get('http://localhost:8888/src/components/server.js?since=' + this.props.currentTab);
 		source.then(
 			value => this.setState({
 				loading: false,
@@ -29,9 +58,10 @@ class Main extends React.Component {
 			}));
 	}
 	//在接收到新的 props 或者 state，将要渲染之前调用,从服务器调取新的数据,接收新的数据state变化则会进行再次渲染
-	componentWillUpdate(nextProps, nextState){
-		if(this.state.defatultTab !== nextState.defatultTab) {
-		let source = $.get('http://localhost:8888/src/components/server.js?since=' + nextState.defatultTab );
+	componentWillUpdate(nextProps){
+		//如何判断现在this.props.currentTab和nextProps.currentTab相同,但是仍然加载了新的数据
+		if(this.props.currentTab !== nextProps.currentTab) {
+		let source = $.get('http://localhost:8888/src/components/server.js?since=' + nextProps.currentTab );
 			source.then(
 			value => this.setState({
 				loading: false,
@@ -43,43 +73,40 @@ class Main extends React.Component {
 			}));
 		}
 	}
-	/* 由组件中<Navigation tab = {tabData} currentTab={this.changeCuurentTab}/>currentTab={this.changeCuurentTab}传递当前changeCuurentTab函数
-	 * 在Navigation组件中调用该函数changeCuurentTab改变defatultTab的什,会有一次渲染
-	 */
-	changeCuurentTab(v) {
-		this.setState({
-			defatultTab: v
-		});
-	}
+
 	render() {
 		// if(this.state.loading) {
 		// 	return '';
 		// } else {
 		// 	return <span>Loading</span>;
 		// }
-
 		// if(this.state.error !== null ) {
 		// 	return '';
 		// } else {
 		// 	return <span>Error: {this.state.error}</span>;
-		// }
-		console.log(this.state.defatultTab);
-		let page = this.state.data || '[]';
+            // }
+	const customPanelStyle = {
+		background: '#fff',
+		borderRadius: 0,
+		marginBottom: 0,
+		border: 0
+	};
+	let page = this.state.data || '[]';
 		let dataCon = JSON.parse(page);
-		console.log(dataCon);
 		let dataArry = [];
-		dataCon.map(function(v, i){
-			let index = i + 1;
-			let listHtml = <Panel header={v.aHrefText} key={index}>
-				<p>{v.des}</p>
-				</Panel>;
-			return dataArry.push(listHtml);
-		});
 
-		let tabData = ['daily', 'weekly', 'monthly'];
-		let ulHtml = <Collapse bordered={true} defaultActiveKey={['1']}>{dataArry}</Collapse>;
+		if(dataCon[0]) {
+			dataCon.map(function(v, i) {
+				let index = i + 1;
+				let listHtml = <Panel header={v.aHrefText} key={index} style={customPanelStyle}>
+					<p>{v.des}</p>
+					</Panel>;
+				dataArry.push(listHtml); });
+		} else {
+			dataArry.push(<Spin />);
+		}
 		return (
-			<Navigation tab = {tabData} currentTab={this.changeCuurentTab} tabActive={this.state.defatultTab} ulHtml = {ulHtml}/>
+			<Collapse style={{margin: '20px', marginTop: '-10px', broderTop: '#fff 1px solid'}} bordered={true} defaultActiveKey={['1']}>{dataArry}</Collapse>
 		);
 	}
 }
@@ -88,4 +115,3 @@ ReactDOM.render(
 	<Main />,
     document.getElementById('content')
 );
-
