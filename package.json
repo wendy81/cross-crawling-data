@@ -17,7 +17,7 @@
     "urlencode2": "^1.0.1"
   },
   "scripts": {
-    "start": "node ./src/components/server.js"
+    "start": "node ./src/server.js"
   },
   "devDependencies": {
     "antd": "^2.10.0",
