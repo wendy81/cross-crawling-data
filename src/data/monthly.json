@@ -1,0 +1,127 @@
+[
+    {
+        "aHref": "https://github.com/facebook/prepack",
+        "aHrefText": "facebook / prepack",
+        "des": "Prepack is a partial evaluator for JavaScript. Prepack rewrites a JavaScript bundle, resulting in JavaScript code that executes more efficiently."
+    },
+    {
+        "aHref": "https://github.com/keon/algorithms",
+        "aHrefText": "keon / algorithms",
+        "des": "Minimal examples of data structures and algorithms in Python"
+    },
+    {
+        "aHref": "https://github.com/airbnb/react-sketchapp",
+        "aHrefText": "airbnb / react-sketchapp",
+        "des": "render React components to Sketch ⚛️💎"
+    },
+    {
+        "aHref": "https://github.com/gothinkster/realworld",
+        "aHrefText": "gothinkster / realworld",
+        "des": "TodoMVC for the RealWorld™ — Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more 🏅"
+    },
+    {
+        "aHref": "https://github.com/atech/postal",
+        "aHrefText": "atech / postal",
+        "des": "📨 A fully featured open source mail delivery platform for incoming & outgoing e-mail"
+    },
+    {
+        "aHref": "https://github.com/zeit/pkg",
+        "aHrefText": "zeit / pkg",
+        "des": "Package your Node.js project into an executable"
+    },
+    {
+        "aHref": "https://github.com/kamranahmedse/developer-roadmap",
+        "aHrefText": "kamranahmedse / developer-roadmap",
+        "des": "Roadmap to becoming a web developer in 2017"
+    },
+    {
+        "aHref": "https://github.com/tootsuite/mastodon",
+        "aHrefText": "tootsuite / mastodon",
+        "des": "A GNU Social-compatible microblogging server"
+    },
+    {
+        "aHref": "https://github.com/gurugio/lowlevelprogramming-university",
+        "aHrefText": "gurugio / lowlevelprogramming-university",
+        "des": "How to be low-level programmer"
+    },
+    {
+        "aHref": "https://github.com/jwasham/coding-interview-university",
+        "aHrefText": "jwasham / coding-interview-university",
+        "des": "A complete computer science study plan to become a software engineer."
+    },
+    {
+        "aHref": "https://github.com/tuvttran/project-based-learning",
+        "aHrefText": "tuvttran / project-based-learning",
+        "des": "Curated list of project-based tutorials"
+    },
+    {
+        "aHref": "https://github.com/tensorflow/tensorflow",
+        "aHrefText": "tensorflow / tensorflow",
+        "des": "Computation using data flow graphs for scalable machine learning"
+    },
+    {
+        "aHref": "https://github.com/notwaldorf/tiny-care-terminal",
+        "aHrefText": "notwaldorf / tiny-care-terminal",
+        "des": "💖💻 A little dashboard that tries to take care of you when you're using your terminal."
+    },
+    {
+        "aHref": "https://github.com/caffe2/caffe2",
+        "aHrefText": "caffe2 / caffe2",
+        "des": "Caffe2 is a lightweight, modular, and scalable deep learning framework."
+    },
+    {
+        "aHref": "https://github.com/MichielDerhaeg/build-linux",
+        "aHrefText": "MichielDerhaeg / build-linux",
+        "des": "A short tutorial about building Linux based operating systems."
+    },
+    {
+        "aHref": "https://github.com/vuejs/vue",
+        "aHrefText": "vuejs / vue",
+        "des": "A progressive, incrementally-adoptable JavaScript framework for building UI on the web."
+    },
+    {
+        "aHref": "https://github.com/kitze/sizzy",
+        "aHrefText": "kitze / sizzy",
+        "des": "A tool for developing responsive websites crazy-fast"
+    },
+    {
+        "aHref": "https://github.com/aritraroy/UltimateAndroidReference",
+        "aHrefText": "aritraroy / UltimateAndroidReference",
+        "des": "🚀 Ultimate Android Reference - Your Road to Become a Better Android Developer"
+    },
+    {
+        "aHref": "https://github.com/facebook/litho",
+        "aHrefText": "facebook / litho",
+        "des": "A declarative framework for building efficient UIs on Android."
+    },
+    {
+        "aHref": "https://github.com/exacity/deeplearningbook-chinese",
+        "aHrefText": "exacity / deeplearningbook-chinese",
+        "des": "Deep Learning Book Chinese Translation"
+    },
+    {
+        "aHref": "https://github.com/facebook/react",
+        "aHrefText": "facebook / react",
+        "des": "A declarative, efficient, and flexible JavaScript library for building user interfaces."
+    },
+    {
+        "aHref": "https://github.com/google/tamperchrome",
+        "aHrefText": "google / tamperchrome",
+        "des": "Tamper Chrome is a Chrome extension that allows you to modify HTTP requests on the fly and aid on web security testing. Tamper Chrome works across all operating systems (including Chrome OS)."
+    },
+    {
+        "aHref": "https://github.com/prettier/prettier",
+        "aHrefText": "prettier / prettier",
+        "des": "Prettier is an opinionated JavaScript formatter."
+    },
+    {
+        "aHref": "https://github.com/facebook/react-vr",
+        "aHrefText": "facebook / react-vr",
+        "des": "Create amazing 360 and VR content using React"
+    },
+    {
+        "aHref": "https://github.com/Idnan/bash-guide",
+        "aHrefText": "Idnan / bash-guide",
+        "des": "A guide to learn bash"
+    }
+]

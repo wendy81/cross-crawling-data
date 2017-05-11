@@ -53,7 +53,7 @@ class List extends React.Component {
 	/*初始化渲染执行之后立刻调用一次*/
 	componentDidMount() {
 		/* let initStartTime = Date.now();*/
-		let source = $.get('http://localhost:8888/src/components/server.js?since=' + this.props.currentTab);
+		let source = $.get('../data/' + this.props.currentTab + '.json');
 		source.then(
 			value => {
 				/* 计算数据从服务器请求回来后的加载时间（进度）*/
@@ -104,9 +104,8 @@ class List extends React.Component {
 		margin: '20px',
 		textAlign: 'center'
 	};
-	let page = this.state.data || '[]';
-		let dataCon = JSON.parse(page);
-		let dataArry = [], spinArry = [], collapseActiveKey = [];
+	let dataCon = this.state.data || [];
+	let dataArry = [], spinArry = [], collapseActiveKey = [];
 
 	/* 计算数据在组件 所有数据下载时间 － 第一次渲染后加载时间 ,根据时间计算百分比显示进度条
 	现在是不知道怎么判断Progress组件的 percent属性动态变化,下面这个例子会显示多个Progress组件,正确的只要求显示一个Progress组件
