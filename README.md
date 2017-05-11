@@ -95,10 +95,10 @@
       })]
       
 ###  第三:解决在 react@0.14.9 react-dom@0.14.9中对 propsType的验证提示
-
+	
 ###  解决方案 引入模块 prop-types：
 
-	const PropTypes = require('prop-types');
+    const PropTypes = require('prop-types');
 	//设置组件中的属性类型,就不会再有提示
 	Main.propTypes = {
 	defaultActiveKey: PropTypes.string
