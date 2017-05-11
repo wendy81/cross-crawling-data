@@ -88,7 +88,7 @@ module.exports = function (grunt) {
             flatten: true,
             expand: true,
             src: ['<%= pkg.src %>/favicon.ico'],
-            dest: '<%= pkg.dist %>/',
+            dest: '<%= pkg.current %>/',
             filter: 'isFile'
           },         
           {
