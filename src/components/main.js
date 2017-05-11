@@ -53,7 +53,7 @@ class List extends React.Component {
 	/*初始化渲染执行之后立刻调用一次*/
 	componentDidMount() {
 		/* let initStartTime = Date.now();*/
-		let source = $.get('https://wendy81.github.io/react-webpack-web/data/' + this.props.currentTab + '.json');
+		let source = $.get('https://wendy81.github.io/react-webpack-web/dist/data/' + this.props.currentTab + '.json');
 		source.then(
 			value => {
 				/* 计算数据从服务器请求回来后的加载时间（进度）*/

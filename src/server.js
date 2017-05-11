@@ -28,7 +28,7 @@ http.createServer(function(req, res) {
                 fs.writeFile(__dirname + '/data/' + selcted + '.json', JSON.stringify(listArry, null, 4), (err) => {
                   if (err) throw err;
                   console.log('The file has been saved!');
-                });                 
+                });                
                 // console.log(Object.prototype.toString.call(listArry))
                 // console.log(listArry)
                 res.end(JSON.stringify(listArry) + '\n');
