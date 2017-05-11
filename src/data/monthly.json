@@ -35,19 +35,9 @@
         "des": "Roadmap to becoming a web developer in 2017"
     },
     {
-        "aHref": "https://github.com/tootsuite/mastodon",
-        "aHrefText": "tootsuite / mastodon",
-        "des": "A GNU Social-compatible microblogging server"
-    },
-    {
         "aHref": "https://github.com/gurugio/lowlevelprogramming-university",
         "aHrefText": "gurugio / lowlevelprogramming-university",
         "des": "How to be low-level programmer"
-    },
-    {
-        "aHref": "https://github.com/jwasham/coding-interview-university",
-        "aHrefText": "jwasham / coding-interview-university",
-        "des": "A complete computer science study plan to become a software engineer."
     },
     {
         "aHref": "https://github.com/tuvttran/project-based-learning",
@@ -55,9 +45,14 @@
         "des": "Curated list of project-based tutorials"
     },
     {
-        "aHref": "https://github.com/tensorflow/tensorflow",
-        "aHrefText": "tensorflow / tensorflow",
-        "des": "Computation using data flow graphs for scalable machine learning"
+        "aHref": "https://github.com/tootsuite/mastodon",
+        "aHrefText": "tootsuite / mastodon",
+        "des": "A GNU Social-compatible microblogging server"
+    },
+    {
+        "aHref": "https://github.com/MichielDerhaeg/build-linux",
+        "aHrefText": "MichielDerhaeg / build-linux",
+        "des": "A short tutorial about building Linux based operating systems."
     },
     {
         "aHref": "https://github.com/notwaldorf/tiny-care-terminal",
@@ -70,9 +65,14 @@
         "des": "Caffe2 is a lightweight, modular, and scalable deep learning framework."
     },
     {
-        "aHref": "https://github.com/MichielDerhaeg/build-linux",
-        "aHrefText": "MichielDerhaeg / build-linux",
-        "des": "A short tutorial about building Linux based operating systems."
+        "aHref": "https://github.com/tensorflow/tensorflow",
+        "aHrefText": "tensorflow / tensorflow",
+        "des": "Computation using data flow graphs for scalable machine learning"
+    },
+    {
+        "aHref": "https://github.com/aritraroy/UltimateAndroidReference",
+        "aHrefText": "aritraroy / UltimateAndroidReference",
+        "des": "🚀 Ultimate Android Reference - Your Road to Become a Better Android Developer"
     },
     {
         "aHref": "https://github.com/vuejs/vue",
@@ -80,14 +80,14 @@
         "des": "A progressive, incrementally-adoptable JavaScript framework for building UI on the web."
     },
     {
+        "aHref": "https://github.com/jwasham/coding-interview-university",
+        "aHrefText": "jwasham / coding-interview-university",
+        "des": "A complete computer science study plan to become a software engineer."
+    },
+    {
         "aHref": "https://github.com/kitze/sizzy",
         "aHrefText": "kitze / sizzy",
         "des": "A tool for developing responsive websites crazy-fast"
-    },
-    {
-        "aHref": "https://github.com/aritraroy/UltimateAndroidReference",
-        "aHrefText": "aritraroy / UltimateAndroidReference",
-        "des": "🚀 Ultimate Android Reference - Your Road to Become a Better Android Developer"
     },
     {
         "aHref": "https://github.com/facebook/litho",
@@ -100,14 +100,14 @@
         "des": "Deep Learning Book Chinese Translation"
     },
     {
-        "aHref": "https://github.com/facebook/react",
-        "aHrefText": "facebook / react",
-        "des": "A declarative, efficient, and flexible JavaScript library for building user interfaces."
-    },
-    {
         "aHref": "https://github.com/google/tamperchrome",
         "aHrefText": "google / tamperchrome",
         "des": "Tamper Chrome is a Chrome extension that allows you to modify HTTP requests on the fly and aid on web security testing. Tamper Chrome works across all operating systems (including Chrome OS)."
+    },
+    {
+        "aHref": "https://github.com/facebook/react",
+        "aHrefText": "facebook / react",
+        "des": "A declarative, efficient, and flexible JavaScript library for building user interfaces."
     },
     {
         "aHref": "https://github.com/prettier/prettier",
@@ -120,8 +120,8 @@
         "des": "Create amazing 360 and VR content using React"
     },
     {
-        "aHref": "https://github.com/Idnan/bash-guide",
-        "aHrefText": "Idnan / bash-guide",
-        "des": "A guide to learn bash"
+        "aHref": "https://github.com/anbox/anbox",
+        "aHrefText": "anbox / anbox",
+        "des": "Anbox is a container-based approach to boot a full Android system on a regular GNU/Linux system"
     }
 ]
