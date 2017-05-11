@@ -58,13 +58,11 @@
             }
         }
     )}).listen(8888);
-
-
-## 客户端说明
-
-###  第一:针对antd 提示main.js:941 You are using a whole package of antd, please use https://www.npmjs.com/package/babel-plugin-import to reduce app bundle size.
-
-####解决方案：
+    
+### 客户端说明
+### 第一:针对antd 提示
+You are using a whole package of antd, please use https://www.npmjs.com/package/babel-plugin-import to reduce app bundle size.
+#### 解决方案：
 	import Tabs from 'antd/lib/tabs';
 	import Collapse from 'antd/lib/collapse';
 	import Spin from 'antd/lib/spin';
@@ -72,15 +70,12 @@
 	const Panel = Collapse.Panel;
 	require('antd/dist/antd.css');
 
-###  第二:针对程序引入多个插件，最后生成的bundle.js太大
-
-
-###  解决方案 webpack.config.js：
+### 第二:针对程序引入多个插件，最后生成的bundle.js太大
+### 解决方案 webpack.config.js：
 * 利用vendor把相关插件单独放到一个文件中引入即可
 * 这样做的好处是,vendor.js中的文件首次运行会放到缓存,再次运行会提升访问速度
 * 首先在entry中设置vendor
 * 其次设置plugin
-
 
 	  entry: {
       hot: 'webpack/hot/only-dev-server',
@@ -94,10 +89,8 @@
       filename: 'vendor.js'
       })]
       
-###  第三:解决在 react@0.14.9 react-dom@0.14.9中对 propsType的验证提示
-
-###  解决方案 引入模块 prop-types：
-
+### 第三:解决在 react@0.14.9 react-dom@0.14.9中对 propsType的验证提示
+#### 解决方案 引入模块 prop-types：
 	const PropTypes = require('prop-types');
 	//设置组件中的属性类型,就不会再有提示
 	Main.propTypes = {
