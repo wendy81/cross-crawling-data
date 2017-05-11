@@ -52,8 +52,9 @@ class List extends React.Component {
 	}
 	/*初始化渲染执行之后立刻调用一次*/
 	componentDidMount() {
+		console.log(__dirname);
 		/* let initStartTime = Date.now();*/
-		let source = $.get('/data/' + this.props.currentTab + '.json');
+		let source = $.get(__dirname + 'data/' + this.props.currentTab + '.json');
 		source.then(
 			value => {
 				/* 计算数据从服务器请求回来后的加载时间（进度）*/
