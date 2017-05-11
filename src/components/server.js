@@ -24,8 +24,6 @@ http.createServer(function(req, res) {
                     "Content-Type": "text/html; charset=UTF-8",
                     'Access-Control-Allow-Origin': req.headers.origin
                 });
-                // console.log(Object.prototype.toString.call(listArry))
-                // console.log(listArry)
                 res.end(JSON.stringify(listArry) + '\n');
             } else {
                 console.log(error)

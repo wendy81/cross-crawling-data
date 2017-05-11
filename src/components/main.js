@@ -6,9 +6,10 @@ const PropTypes = require('prop-types');
 import Tabs from 'antd/lib/tabs';
 import Collapse from 'antd/lib/collapse';
 import Spin from 'antd/lib/spin';
-/*import Progress from 'antd/lib/progress';*/
 const TabPane = Tabs.TabPane;
 const Panel = Collapse.Panel;
+require('antd/dist/antd.css');
+
 const $ = require('jquery');
 
 require('antd/dist/antd.css');

@@ -20,7 +20,6 @@ module.exports = {
   devtool: false,
   entry: {
           main: './src/components/main.js',
-          vendor: ['react', 'react-dom', 'prop-types', 'antd/lib/tabs', 'antd/lib/collapse', 'jquery', 'antd/dist/antd.css']
          },
 
   stats: {
