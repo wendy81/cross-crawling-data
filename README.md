@@ -1,4 +1,4 @@
-# react-webpack-web
+# cross-crawling-data
 * 实现跨域抓取网站信息
 * 利用服务器(nodejs)做为代理,由服务器抓取网站信息,然后返回抓取信息到客户端
 
