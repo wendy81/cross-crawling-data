@@ -18,15 +18,31 @@ tab切换,装载List组件,装载相当于运行一次List组件,即每次装载
 class Main extends React.Component {
 	constructor(props) {
 		super(props);
+		this.state = {listCount: 0};
+	}
+	func (count) {
+		this.setState({
+			listCount: count
+		});
 	}
 	render() {
 		let tabData = ['daily', 'weekly', 'monthly'];
 		let tabList = [];
+		let listCount = this.state.listCount;
+		if( listCount === 0 ) {
+			listCount = '';
+		} else {
+			listCount = '(' + this.state.listCount + ')';
+		}
 		tabData.map((v, i) => {
 			let listHtml;
-			listHtml = <TabPane tab={v} key={i}>
-
-				<List currentTab = {v}/>
+			listHtml = <TabPane tab={v + listCount} key={i}>
+				/*
+				* 子组件List向父组件TabPane传递
+				*  List字组件中 得到数据  以props的形式传给 List本身（其中的属性以函数得到）
+				* 通过函数可以更改state的值,从而 父组件以state的形式获得数据
+				*/
+				<List currentTab = {v} countAmount={count => this.func(count)} />
 			</TabPane>;
 			tabList.push(listHtml);
 		});
@@ -66,14 +82,16 @@ class List extends React.Component {
 				this.setState({
 				loading: true,
 				data: value
-			}); },
+			});
+			let data = JSON.parse(this.state.data);
+			this.props.countAmount(data.pop().dataLength);
+		},
 			error => this.setState({
 				loading: false,
 				error: error
 			}));
 	}
 	render() {
-
 	/*判断数据是否加载*/
 	let warnigInfo = [];
 	if(this.state.loading) {
@@ -104,8 +122,8 @@ class List extends React.Component {
 		textAlign: 'center'
 	};
 	let page = this.state.data || '[]';
-		let dataCon = JSON.parse(page);
-		let dataArry = [], spinArry = [], collapseActiveKey = [];
+	let dataCon = JSON.parse(page);
+	let dataArry = [], spinArry = [], collapseActiveKey = [];
 
 	/* 计算数据在组件 所有数据下载时间 － 第一次渲染后加载时间 ,根据时间计算百分比显示进度条
 	现在是不知道怎么判断Progress组件的 percent属性动态变化,下面这个例子会显示多个Progress组件,正确的只要求显示一个Progress组件
@@ -117,8 +135,10 @@ class List extends React.Component {
 			progressArry.push(<Progress style={progressStyle} key={t} type="dashboard" percent={millisecondPercent} />);
 		}
 	}*/
+		// React.Children.count(dataArry)
 
 		if(dataCon[0]) {
+			dataCon.pop();
 			dataCon.map(function(v, i) {
 				let index = i + 1;
 				let listHtml = <Panel header={v.aHrefText} key={index} style={customPanelStyle}>
@@ -128,6 +148,7 @@ class List extends React.Component {
 				/* 把所有json对象的下标都加载到扩展数组中collapseActiveKey*/
 				collapseActiveKey.push(String(index));
 			});
+
 		} else {
 			let spinHtml;
 			spinHtml = <div key="spin" style={spinStyle}>
@@ -135,6 +156,7 @@ class List extends React.Component {
 						</div>;
 			spinArry.push(spinHtml);
 		}
+		// console.log(React.Children.count(dataArry));
 		return (
 			<div>
 				{/*回到顶部*/}

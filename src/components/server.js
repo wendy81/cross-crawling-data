@@ -13,6 +13,7 @@ http.createServer(function(req, res) {
             if (!error && response_.statusCode == 200) {
                 $ = cheerio.load(body);
                 let showCon = $('.repo-list li');
+                let dataLength = showCon.length;
                 showCon.map(function(index, ele) {
                     let arryObj = {};
                     arryObj.aHref = 'https://github.com' + $(ele).find('a').attr('href');
@@ -20,10 +21,12 @@ http.createServer(function(req, res) {
                     arryObj.des = ($(ele).find('p').text()).trim();
                     listArry[index] = arryObj;
                 })
+                listArry.push({dataLength: dataLength});
                 res.writeHead(200, {
                     "Content-Type": "text/html; charset=UTF-8",
                     'Access-Control-Allow-Origin': req.headers.origin
                 });
+                console.log(listArry);
                 res.end(JSON.stringify(listArry) + '\n');
             } else {
                 console.log(error)
