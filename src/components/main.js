@@ -6,6 +6,7 @@ const PropTypes = require('prop-types');
 import Tabs from 'antd/lib/tabs';
 import Collapse from 'antd/lib/collapse';
 import Spin from 'antd/lib/spin';
+import BackTop from 'antd/lib/back-top';
 const TabPane = Tabs.TabPane;
 const Panel = Collapse.Panel;
 require('antd/dist/antd.css');
@@ -98,12 +99,22 @@ class List extends React.Component {
 	const collapeStyle = {
 		border: '1px solid #fff',
 		fontSize: '14px',
-		margin: '20px',
+		margin: '10px',
 		marginTop: '0px'
 	};
 	const spinStyle = {
 		margin: '20px',
 		textAlign: 'center'
+	};
+	const antBack = {
+		height: '40px',
+		width: '40px',
+		lineHeight: '40px',
+		borderRadius: '4px',
+		backgroundColor: '#1088e9',
+		color: '#fff',
+		textAlign: 'center',
+		fontSize: '16px'
 	};
 	let page = this.state.data || '[]';
 		let dataCon = JSON.parse(page);
@@ -139,6 +150,10 @@ class List extends React.Component {
 		}
 		return (
 			<div>
+				{/*回到顶部*/}
+				<BackTop>
+					<div style={antBack}>UP</div>
+				</BackTop>
 				{/*数据加载状态*/}
 				{warnigInfo}
 				{/*数据加载完成前,加载中ing...*/}
