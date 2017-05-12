@@ -6,14 +6,12 @@ const PropTypes = require('prop-types');
 import Tabs from 'antd/lib/tabs';
 import Collapse from 'antd/lib/collapse';
 import Spin from 'antd/lib/spin';
+import BackTop from 'antd/lib/back-top';
 const TabPane = Tabs.TabPane;
 const Panel = Collapse.Panel;
 require('antd/dist/antd.css');
 
 const $ = require('jquery');
-
-require('antd/dist/antd.css');
-
 /*
 tab切换,装载List组件,装载相当于运行一次List组件,即每次装载List组件,都会走一次生命周期,只需要每次在渲染后调用componentDidMount函数装载不同的数据即可
 */
@@ -139,6 +137,10 @@ class List extends React.Component {
 		}
 		return (
 			<div>
+				{/*回到顶部*/}
+				<BackTop>
+					<div className="ant-back-top-content">UP</div>
+				</BackTop>
 				{/*数据加载状态*/}
 				{warnigInfo}
 				{/*数据加载完成前,加载中ing...*/}
