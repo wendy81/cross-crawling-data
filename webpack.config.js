@@ -7,7 +7,6 @@
 'use strict';
 var webpack = require('webpack');
 
-
 module.exports = {
 
   output: {
@@ -69,7 +68,7 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
         filename: 'vendor.js'
-    })    
+    })
   ]
 
 };
