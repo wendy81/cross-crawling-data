@@ -4,7 +4,7 @@
 
 ## 如何使用
 * 需要nodej环境,先安装这个环境
-* git clone git@github.com:wendy81/react-webpack-web.git
+* git clone git@github.com:wendy81/cross-crawling-data.git
 * 复制远程库到本地后,执行 npm install ,安装所需的插件
 
 ## 先启动服务器
