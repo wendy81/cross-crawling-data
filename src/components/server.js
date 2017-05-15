@@ -12,6 +12,11 @@ http.createServer(function(req, res) {
         function(error, response_, body) {
             if (!error && response_.statusCode == 200) {
                 $ = cheerio.load(body);
+                let dataArry = {};
+                /*
+                * Repositories 相关数据信息
+                * aHref=链接   aHrefText＝链接文字  des＝相关文字描述
+                */
                 let showCon = $('.repo-list li');
                 let dataLength = showCon.length;
                 showCon.map(function(index, ele) {
@@ -22,12 +27,25 @@ http.createServer(function(req, res) {
                     listArry[index] = arryObj;
                 })
                 listArry.push({dataLength: dataLength});
+                /*
+                * All languages
+                */
+                let selectLanguages = $('span.select-menu-item-text'), languagesArry = [];
+                selectLanguages.map(function(index, ele) {
+                    languagesArry[index] = $(ele).text();
+                })
+                /*
+                * dataArry = {listArry: listArry, languagesArry: languagesArry}
+                * listArry 数据信息数组   languagesArry 语言分类数组
+                */
+                dataArry.listArry = listArry;
+                dataArry.languagesArry = languagesArry;
+
                 res.writeHead(200, {
                     "Content-Type": "text/html; charset=UTF-8",
                     'Access-Control-Allow-Origin': req.headers.origin
                 });
-                console.log(listArry);
-                res.end(JSON.stringify(listArry) + '\n');
+                res.end(JSON.stringify(dataArry) + '\n');
             } else {
                 console.log(error)
             }

@@ -7,6 +7,9 @@ import Tabs from 'antd/lib/tabs';
 import Collapse from 'antd/lib/collapse';
 import Spin from 'antd/lib/spin';
 import BackTop from 'antd/lib/back-top';
+import Select from 'antd/lib/select';
+
+const Option = Select.Option;
 const TabPane = Tabs.TabPane;
 const Panel = Collapse.Panel;
 require('antd/dist/antd.css');
@@ -37,19 +40,22 @@ class Main extends React.Component {
 		tabData.map((v, i) => {
 			let listHtml;
 			listHtml = <TabPane tab={v + listCount} key={i}>
-				/*
+				{/*
 				* 子组件List向父组件TabPane传递
 				*  List字组件中 得到数据  以props的形式传给 List本身（其中的属性以函数得到）
 				* 通过函数可以更改state的值,从而 父组件以state的形式获得数据
-				*/
+				*/}
 				<List currentTab = {v} countAmount={count => this.func(count)} />
 			</TabPane>;
 			tabList.push(listHtml);
 		});
 		return (
-			<Tabs defaultActiveKey="0">
-				{tabList}
-			</Tabs>
+			<div>
+				<Language />
+				<Tabs defaultActiveKey="0">
+					{tabList}
+				</Tabs>
+			</div>
 		);
 	}
 }
@@ -59,6 +65,19 @@ class Main extends React.Component {
 Main.propTypes = {
   defaultActiveKey: PropTypes.string
 };
+
+class Language extends React.Component {
+	constructor(props) { //初始化this.state
+		super(props);
+	}
+	render() {
+		return (
+			<Select defaultValue="lucy" style={{ width: '100%' }}>
+				<Option value="jack">Jack</Option>
+			</Select>
+		);
+	}
+}
 
 class List extends React.Component {
 	constructor(props) { //初始化this.state
@@ -83,8 +102,9 @@ class List extends React.Component {
 				loading: true,
 				data: value
 			});
-			let data = JSON.parse(this.state.data);
-			this.props.countAmount(data.pop().dataLength);
+			let data = JSON.parse(value);
+			let dataListArry = data.listArry;
+			this.props.countAmount(dataListArry.pop().dataLength);
 		},
 			error => this.setState({
 				loading: false,
@@ -122,7 +142,7 @@ class List extends React.Component {
 		textAlign: 'center'
 	};
 	let page = this.state.data || '[]';
-	let dataCon = JSON.parse(page);
+	let dataCon = (JSON.parse(page)).listArry;
 	let dataArry = [], spinArry = [], collapseActiveKey = [];
 
 	/* 计算数据在组件 所有数据下载时间 － 第一次渲染后加载时间 ,根据时间计算百分比显示进度条
@@ -137,7 +157,7 @@ class List extends React.Component {
 	}*/
 		// React.Children.count(dataArry)
 
-		if(dataCon[0]) {
+		if(dataCon) {
 			dataCon.pop();
 			dataCon.map(function(v, i) {
 				let index = i + 1;
