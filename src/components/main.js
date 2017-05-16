@@ -10,6 +10,7 @@ import BackTop from 'antd/lib/back-top';
 import Select from 'antd/lib/select';
 import Card from 'antd/lib/card';
 
+const OptGroup = Select.OptGroup;
 const Option = Select.Option;
 const TabPane = Tabs.TabPane;
 const Panel = Collapse.Panel;
@@ -22,7 +23,13 @@ tab切换,装载List组件,装载相当于运行一次List组件,即每次装载
 class Main extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {listCount: 0, dataZero: 1, currentLanguage: 'javascript', selectAllOptions: []};
+		/*
+		* listCount 当前选中的tab的数据条数
+		* shoWarnig 当前语言没有对应的数据时显示对应的提醒信息
+		* currentLanguage 当前语言
+		* selectAllOptions 所有语言列表
+		*/
+		this.state = {listCount: 0, shoWarnig: false, currentLanguage: 'javascript', selectAllOptions: []};
 	}
 	changeTab (v) {
 		/*
@@ -44,18 +51,22 @@ class Main extends React.Component {
 			listCount: count
 		});
 	}
-	dataZero () {
-		console.log(this.state.listCount);
-		if(this.state.listCount === 0) {
-			this.setState({
-				dataZero: 0
-			});
-		} else {
-			this.setState({
-				dataZero: 1
-			});
+	shoWarnig (amount) {  //这是用来判断当 List组件的属性language改变时,有来触发的函数
+		/*
+		* undefined  这个显示原因,现在不知道
+		* amount数组为空数值或者有值时都为true, 故需要用amount.length来判断
+		*/
+		if(amount !== undefined) {
+			if(!amount.length) {
+				this.setState({
+					shoWarnig: true
+				});
+			}else {
+				this.setState({
+					shoWarnig: false
+				});
+			}
 		}
-		console.log(this.state.dataZero);
 	}
 	/*
 	* 当前所选语言选项
@@ -79,10 +90,8 @@ class Main extends React.Component {
 		let tabList = [];
 		let listCount = this.state.listCount;
 		let listHtml, cardHtml;
-		if( !this.state.dataZero ) {
-			cardHtml = <Card title="Waring" style={{ width: '80%', fontSize: 16, marginLeft: 'auto', marginRight: 'auto', marginTop: 20 }}>
-					<p>It looks like we don’t have any trending repositories for {this.state.currentLanguage}.</p>
-				</Card>;
+		if( this.state.shoWarnig ) {
+			cardHtml = <ShoWarnig currentLanguage = {this.state.currentLanguage} />;
 		}
 		if( listCount === 0 ) {
 			listCount = '';
@@ -91,7 +100,8 @@ class Main extends React.Component {
 		}
 		tabData.map((v, i) => {
 			listHtml = <TabPane tab={v + listCount} key={i}>
-				{/*
+				{
+				/*
 				* 子组件List向父组件TabPane传递
 				*  List字组件中 得到数据  以props的形式传给 List本身（其中的属性以函数得到）
 				* 通过函数可以更改state的值,从而 父组件以state的形式获得数据
@@ -105,6 +115,8 @@ class Main extends React.Component {
 				getAllOptions = {optionsVal => this.getAllOptions(optionsVal)}
 				countAmount = {count => this.func(count)}
 				language = {this.state.currentLanguage}
+				shoWarnig = {amount => this.shoWarnig(amount)}
+				shoWarnigStatus = {this.state.shoWarnig}
 				// mainSource={ (language, currentTab) => { $.get('http://localhost:8888/src/components/server.js/' + language + '?since=' + currentTab); } }
 				/>
 			</TabPane>;
@@ -112,11 +124,11 @@ class Main extends React.Component {
 		});
 		return (
 			<div>
-				{cardHtml}
-				<Language getAllOptions={this.state.selectAllOptions} currentLanguage={language => this.getLanguage(language)} dataZero = {() => this.dataZero()}/>
+				<Language getAllOptions={this.state.selectAllOptions} currentLanguage={language => this.getLanguage(language)}/>
 				<Tabs defaultActiveKey="0">
 					{tabList}
 				</Tabs>
+				{cardHtml}
 			</div>
 		);
 	}
@@ -128,27 +140,78 @@ Main.propTypes = {
   defaultActiveKey: PropTypes.string
 };
 
+class ShoWarnig extends React.Component {
+	constructor(props) { //初始化this.state
+		super(props);
+	}
+	render() {
+		return (
+			<Card title="Waring" style={{ width: '80%', fontSize: 16, marginLeft: 'auto', marginRight: 'auto', marginTop: 20 }}>
+					<p>It looks like we don’t have any trending repositories for {this.props.currentLanguage}.</p>
+			</Card>
+		);
+	}
+}
+
 class Language extends React.Component {
 	constructor(props) { //初始化this.state
 		super(props);
 	}
 	handleChange(value) {
 		this.props.currentLanguage(value);
-		this.props.dataZero();
 	}
 	render() {
 		/*
 		* new Set([])用来过滤数组中重复的数据
 		* Array.from() 将set结构转化为数组
 		*/
-		let selectOptionsVals = Array.from(new Set(this.props.getAllOptions));
+		let selectOptionsVals = new Set(this.props.getAllOptions);
+		let upperArry = [];
+		for(let val of selectOptionsVals) {
+			/* 把所有选项变成大写 */
+			let toUpperCase = val.toUpperCase();
+			upperArry.push(toUpperCase);
+		}
+		/*变成大写才可以按字母顺序分类*/
+		upperArry.sort();
 		let optionsArry = [], selectHtml;
-		if(selectOptionsVals[0]){
-			selectOptionsVals.map(function(val) {
-				let valReg = val.replace(/\s/g, '-').toLowerCase();
-				let optionHtml = <Option key={valReg} value={valReg}>{val}</Option>;
+		let firstLetterArry = [], sameFirstLetterArry = [];
+
+		/* 实现方式以首字母分组的下拉菜单 */
+		if(upperArry[0]){
+			upperArry.map(function(val) {
+				firstLetterArry.push(val.slice(0, 1));
+			});
+			/*
+			* @params firstLetterArry ['A', 'B', ...]
+			*/
+			firstLetterArry = Array.from(new Set(firstLetterArry));
+			/*
+			* @params sameFirstLetter 把首字母相同的放到一个数组 [以A开始]...
+			* @params sameFirstLetterArry [[以A开始], [以B开始], [以C开始] ,...]
+			*/
+			firstLetterArry.map(function(v) {
+				let sameFirstLetter = upperArry.filter(function(value) {
+					return value.slice(0, 1) === v;
+				});
+				sameFirstLetterArry.push(sameFirstLetter);
+			});
+			/*
+			* @params firstLetterArry 和 sameFirstLetterArry数组长度同
+			*/
+			sameFirstLetterArry.map(function(v, i){
+				let sameFirstLetterOption = [];
+				v.map(function(value) {
+					let valReg = value.replace(/\s/g, '-').toLowerCase();
+					let valFirstUpper = valReg.slice(0, 1).toUpperCase() + valReg.slice(1);
+					sameFirstLetterOption.push(<Option key={value} value={valReg}>{valFirstUpper}</Option>);
+				});
+				let optionHtml = <OptGroup key={firstLetterArry[i]} label={firstLetterArry[i]}>
+						{sameFirstLetterOption}
+					</OptGroup>;
 				optionsArry.push(optionHtml);
 			});
+
 			selectHtml = <Select showSearch defaultValue="javascript" style={{ width: '100%' }} onChange={(v) => { this.handleChange(v); }} optionFilterProp="children" filterOption={(input, option) => option.props.value.toLowerCase().indexOf(input.toLowerCase()) >= 0}>
 				{optionsArry}
 			</Select>;
@@ -206,6 +269,7 @@ class List extends React.Component {
 	/*接收到新的language属性时调用这个函数*/
 	componentWillUpdate(nextProps) {
 		if (this.props.language !== nextProps.language) {
+
 		let source = $.get('http://localhost:8888/src/components/server.js/' + nextProps.language + '?since=' + this.props.currentTab);
 		// let source = this.props.mainSource(nextProps.language, this.props.currentTab);
 		source.then(
@@ -217,8 +281,7 @@ class List extends React.Component {
 			let data = JSON.parse(value);
 			let dataListArry = data.listArry;
 			this.props.countAmount(dataListArry.pop().dataLength);
-			console.log("0000000");
-			console.log(dataListArry);
+			this.props.shoWarnig(dataListArry);
 		},
 			error => this.setState({
 				loading: false,
@@ -258,7 +321,6 @@ class List extends React.Component {
 	};
 	let page = this.state.data || '[]';
 	let dataCon = (JSON.parse(page)).listArry || [];
-	console.log(dataCon);
 	let dataArry = [], spinArry = [], collapseActiveKey = [];
 
 	/* 计算数据在组件 所有数据下载时间 － 第一次渲染后加载时间 ,根据时间计算百分比显示进度条
@@ -283,8 +345,10 @@ class List extends React.Component {
 				/* 把所有json对象的下标都加载到扩展数组中collapseActiveKey*/
 				collapseActiveKey.push(String(index));
 			});
-
-		} else {
+		} else if(!this.props.shoWarnigStatus) {
+			/*
+			* 这里需要加shoWarnigStatus这个判断条件 为true
+			*/
 			let spinHtml;
 			spinHtml = <div key="spin" style={spinStyle}>
 						<Spin/>

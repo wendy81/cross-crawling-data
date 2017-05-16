@@ -20,7 +20,21 @@ module.exports = {
   entry: {
       hot: 'webpack/hot/only-dev-server',
       main: './src/components/main.js',
-      vendor: ['react', 'react-dom', 'prop-types', 'antd/lib/tabs', 'antd/lib/collapse', 'jquery', 'antd/dist/antd.css']
+      vendor: [
+      'react', 
+      'react-dom', 
+      'prop-types', 
+      'antd/lib/tabs', 
+      'antd/lib/collapse', 
+      'jquery', 
+      'antd/dist/antd.css', 
+      'antd/lib/tabs', 
+      'antd/lib/collapse', 
+      'antd/lib/spin', 
+      'antd/lib/back-top', 
+      'antd/lib/select', 
+      'antd/lib/card'
+      ]
   },
 
   stats: {
