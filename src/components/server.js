@@ -5,8 +5,15 @@ const cheerio = require('cheerio');
 const url = require('url');
 
 http.createServer(function(req, res) {
-    var selcted = ((url.parse(req.url,true)).query).since;
-    var req_url = "https://github.com/trending?since=" + selcted;
+    var urlDecode = urlencode2.decode(req.url,'gbk');
+    var getUrl = url.parse(urlDecode,true);
+    console.log(getUrl.path);
+    var lastSlash = getUrl.path.lastIndexOf('/');
+    var lastQueMark = getUrl.path.lastIndexOf('?');
+    var slashToQueMarkCon = getUrl.path.slice(lastSlash+1,lastQueMark);
+    console.log(slashToQueMarkCon);
+    var selcted = (getUrl.query).since;
+    var req_url = "https://github.com/trending/" + slashToQueMarkCon + "?since=" + selcted;
     let listArry = []
     request_.get(req_url,
         function(error, response_, body) {
