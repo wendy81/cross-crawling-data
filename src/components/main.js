@@ -29,7 +29,7 @@ class Main extends React.Component {
 		* currentLanguage 当前语言
 		* selectAllOptions 所有语言列表
 		*/
-		this.state = {listCount: 0, shoWarnig: false, currentLanguage: 'javascript', selectAllOptions: []};
+		this.state = {listCount: 0, shoWarnig: false, showSpin: false, currentLanguage: 'javascript', selectAllOptions: []};
 	}
 	changeTab (v) {
 		/*
@@ -70,10 +70,13 @@ class Main extends React.Component {
 	}
 	/*
 	* 当前所选语言选项
+	* 切换语言选择  shoWarnig, showSpin 还原都不显示
 	*/
 	getLanguage (currentLanguage) {
 		this.setState({
-			currentLanguage: currentLanguage
+			currentLanguage: currentLanguage,
+			shoWarnig: false,
+			showSpin: true
 		});
 	}
 	/*
@@ -117,6 +120,7 @@ class Main extends React.Component {
 				language = {this.state.currentLanguage}
 				shoWarnig = {amount => this.shoWarnig(amount)}
 				shoWarnigStatus = {this.state.shoWarnig}
+				showSpin = {this.state.showSpin}
 				// mainSource={ (language, currentTab) => { $.get('http://localhost:8888/src/components/server.js/' + language + '?since=' + currentTab); } }
 				/>
 			</TabPane>;
@@ -140,6 +144,9 @@ Main.propTypes = {
   defaultActiveKey: PropTypes.string
 };
 
+/*
+* 用来显示当没有数据时的提醒框
+*/
 class ShoWarnig extends React.Component {
 	constructor(props) { //初始化this.state
 		super(props);
@@ -149,6 +156,25 @@ class ShoWarnig extends React.Component {
 			<Card title="Waring" style={{ width: '80%', fontSize: 16, marginLeft: 'auto', marginRight: 'auto', marginTop: 20 }}>
 					<p>It looks like we don’t have any trending repositories for {this.props.currentLanguage}.</p>
 			</Card>
+		);
+	}
+}
+/*
+* 用来显示spin动画
+*/
+class ShoWspin extends React.Component {
+	constructor(props) { //初始化this.state
+		super(props);
+	}
+	render() {
+		const spinStyle = {
+			margin: '20px',
+			textAlign: 'center'
+		};
+		return (
+			<div style={spinStyle}>
+				<Spin/>
+			</div>
 		);
 	}
 }
@@ -315,10 +341,6 @@ class List extends React.Component {
 		margin: '20px',
 		marginTop: '0px'
 	};
-	const spinStyle = {
-		margin: '20px',
-		textAlign: 'center'
-	};
 	let page = this.state.data || '[]';
 	let dataCon = (JSON.parse(page)).listArry || [];
 	let dataArry = [], spinArry = [], collapseActiveKey = [];
@@ -349,12 +371,9 @@ class List extends React.Component {
 			/*
 			* 这里需要加shoWarnigStatus这个判断条件 为true
 			*/
-			let spinHtml;
-			spinHtml = <div key="spin" style={spinStyle}>
-						<Spin/>
-						</div>;
-			spinArry.push(spinHtml);
+			spinArry.push(<ShoWspin key='spin' />);
 		}
+
 		// console.log(React.Children.count(dataArry));
 		return (
 			<div>
