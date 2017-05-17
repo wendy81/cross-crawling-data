@@ -182,11 +182,39 @@ class ShoWspin extends React.Component {
 class Language extends React.Component {
 	constructor(props) { //初始化this.state
 		super(props);
+		this.state = {loading: true, error: null, data: null};
+	}
+/*初始化渲染执行之后立刻调用一次*/
+	componentDidMount() {
+		let source = $.get('./data/language.json');
+		source.then(
+			value => {
+				this.setState({
+				loading: true,
+				data: value
+			});
+		},
+			error => this.setState({
+				loading: false,
+				error: error
+			}));
 	}
 	handleChange(value) {
 		this.props.currentLanguage(value);
 	}
 	render() {
+		/*判断数据是否加载*/
+		let warnigInfo = [];
+		if(this.state.loading) {
+			warnigInfo.push('');
+		} else {
+			warnigInfo.push(<span key='Loading'>Loading</span>);
+		}
+		if(this.state.error !== null ) {
+			warnigInfo.push(<span key='Error'>Error: {this.state.error}</span>);
+		} else {
+			warnigInfo.push('');
+		}
 		/*
 		* new Set([])用来过滤数组中重复的数据
 		* Array.from() 将set结构转化为数组

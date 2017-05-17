@@ -3,15 +3,21 @@ const request_ = require('request');
 const urlencode2 = require('urlencode2');
 const cheerio = require('cheerio');
 const url = require('url');
+const fs = require('fs');
 
 http.createServer(function(req, res) {
     var urlDecode = urlencode2.decode(req.url,'gbk');
     var getUrl = url.parse(urlDecode,true);
-    console.log(getUrl.path);
+    var pathname = getUrl.pathname;   
+    /*
+    * 用if判断屏蔽掉favicon.ico
+    * 这里只是把对应的浏览器请求favicon.ico后的操作给屏蔽了,下面的写文件到本地不能走这个请求了/favicon.ico
+    * 但是实际上浏览器还是会请求favicon.ico
+    */
+    if(pathname != '/favicon.ico'){
     var lastSlash = getUrl.path.lastIndexOf('/');
     var lastQueMark = getUrl.path.lastIndexOf('?');
     var slashToQueMarkCon = getUrl.path.slice(lastSlash+1,lastQueMark);
-    console.log(slashToQueMarkCon);
     var selcted = (getUrl.query).since;
     var req_url = "https://github.com/trending/" + slashToQueMarkCon + "?since=" + selcted;
     let listArry = []
@@ -45,19 +51,39 @@ http.createServer(function(req, res) {
                 * dataArry = {listArry: listArry, languagesArry: languagesArry}
                 * listArry 数据信息数组   languagesArry 语言分类数组
                 */
-                dataArry.listArry = listArry;
-                dataArry.languagesArry = languagesArry;
-
+                // 现在改成languagesArry语言数组写到json文件中,前端只需要初始化的时候调用一次语言即可
+                // dataArry.listArry = listArry;
+                // dataArry.languagesArry = languagesArry;
                 res.writeHead(200, {
                     "Content-Type": "text/html; charset=UTF-8",
                     'Access-Control-Allow-Origin': req.headers.origin
                 });
-                res.end(JSON.stringify(dataArry) + '\n');
+
+                var writeLanguagePath2 = __dirname + '/data/';
+                var options = { flags: 'w',
+                                encoding: 'utf8',
+                                mode: 0666 };
+                fs.exists(writeLanguagePath2, function(result) { 
+                    if(!result) {
+                        fs.mkdir(writeLanguagePath2,0777, function (err) {
+                          if (err) throw err;
+                        });
+                        var writeStream = fs.createWriteStream(writeLanguagePath2 + 'languages.json',options);
+                        writeStream.write(JSON.stringify(languagesArry, null, 4));
+                        writeStream.end('This is the end\n');
+                        writeStream.on('finish', () => {
+                            console.error('All writes are now complete.');
+                        });                  
+                    }
+                });
+
+                res.end(JSON.stringify(listArry) + '\n');
             } else {
                 console.log(error)
             }
         }
     )
+}
 }).listen(8888);
 // 终端打印如下信息
 console.log('Server running at http://127.0.0.1:8888/');
