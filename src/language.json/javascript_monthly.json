@@ -1,0 +1,130 @@
+[
+    {
+        "aHref": "https://github.com/facebook/prepack",
+        "aHrefText": "facebook / prepack",
+        "des": "Prepack is a partial evaluator for JavaScript. Prepack rewrites a JavaScript bundle, resulting in JavaScript code that executes more efficiently."
+    },
+    {
+        "aHref": "https://github.com/airbnb/react-sketchapp",
+        "aHrefText": "airbnb / react-sketchapp",
+        "des": "render React components to Sketch ⚛️💎"
+    },
+    {
+        "aHref": "https://github.com/zeit/pkg",
+        "aHrefText": "zeit / pkg",
+        "des": "Package your Node.js project into an executable"
+    },
+    {
+        "aHref": "https://github.com/kitze/sizzy",
+        "aHrefText": "kitze / sizzy",
+        "des": "A tool for developing responsive websites crazy-fast"
+    },
+    {
+        "aHref": "https://github.com/vuejs/vue",
+        "aHrefText": "vuejs / vue",
+        "des": "A progressive, incrementally-adoptable JavaScript framework for building UI on the web."
+    },
+    {
+        "aHref": "https://github.com/notwaldorf/tiny-care-terminal",
+        "aHrefText": "notwaldorf / tiny-care-terminal",
+        "des": "💖💻 A little dashboard that tries to take care of you when you're using your terminal."
+    },
+    {
+        "aHref": "https://github.com/getinsomnia/insomnia",
+        "aHrefText": "getinsomnia / insomnia",
+        "des": "The most intuitive cross-platform REST API Client 😴"
+    },
+    {
+        "aHref": "https://github.com/google/tamperchrome",
+        "aHrefText": "google / tamperchrome",
+        "des": "Tamper Chrome is a Chrome extension that allows you to modify HTTP requests on the fly and aid on web security testing. Tamper Chrome works across all operating systems (including Chrome OS)."
+    },
+    {
+        "aHref": "https://github.com/facebook/react",
+        "aHrefText": "facebook / react",
+        "des": "A declarative, efficient, and flexible JavaScript library for building user interfaces."
+    },
+    {
+        "aHref": "https://github.com/facebook/react-vr",
+        "aHrefText": "facebook / react-vr",
+        "des": "Create amazing 360 and VR content using React"
+    },
+    {
+        "aHref": "https://github.com/tannerlinsley/react-move",
+        "aHrefText": "tannerlinsley / react-move",
+        "des": "React Move - Beautifully and deterministically animate anything in React"
+    },
+    {
+        "aHref": "https://github.com/getify/You-Dont-Know-JS",
+        "aHrefText": "getify / You-Dont-Know-JS",
+        "des": "A book series on JavaScript. @YDKJS on twitter."
+    },
+    {
+        "aHref": "https://github.com/eventbrite/britecharts",
+        "aHrefText": "eventbrite / britecharts",
+        "des": "Client-side reusable Charting Library based on D3.js v4 that allows easy and intuitive use of charts and components that can be composed together creating amazing visualizations."
+    },
+    {
+        "aHref": "https://github.com/facebookincubator/create-react-app",
+        "aHrefText": "facebookincubator / create-react-app",
+        "des": "Create React apps with no build configuration."
+    },
+    {
+        "aHref": "https://github.com/twbs/bootstrap",
+        "aHrefText": "twbs / bootstrap",
+        "des": "The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web."
+    },
+    {
+        "aHref": "https://github.com/airbnb/javascript",
+        "aHrefText": "airbnb / javascript",
+        "des": "JavaScript Style Guide"
+    },
+    {
+        "aHref": "https://github.com/facebook/react-native",
+        "aHrefText": "facebook / react-native",
+        "des": "A framework for building native apps with React."
+    },
+    {
+        "aHref": "https://github.com/prettier/prettier",
+        "aHrefText": "prettier / prettier",
+        "des": "Prettier is an opinionated JavaScript formatter."
+    },
+    {
+        "aHref": "https://github.com/d3/d3",
+        "aHrefText": "d3 / d3",
+        "des": "Bring data to life with SVG, Canvas and HTML. 📊📈🎉"
+    },
+    {
+        "aHref": "https://github.com/ryanmcdermott/clean-code-javascript",
+        "aHrefText": "ryanmcdermott / clean-code-javascript",
+        "des": "🛁 Clean Code concepts adapted for JavaScript"
+    },
+    {
+        "aHref": "https://github.com/hshoff/vx",
+        "aHrefText": "hshoff / vx",
+        "des": "react + d3 = vx | visualization components"
+    },
+    {
+        "aHref": "https://github.com/ngryman/speedracer",
+        "aHrefText": "ngryman / speedracer",
+        "des": "🏎 Collect performance metrics for your library/application."
+    },
+    {
+        "aHref": "https://github.com/zeit/next.js",
+        "aHrefText": "zeit / next.js",
+        "des": "Framework for server-rendered React apps"
+    },
+    {
+        "aHref": "https://github.com/nodejs/node",
+        "aHrefText": "nodejs / node",
+        "des": "Node.js JavaScript runtime ✨🐢🚀✨"
+    },
+    {
+        "aHref": "https://github.com/webpack/webpack",
+        "aHrefText": "webpack / webpack",
+        "des": "A bundler for javascript and friends. Packs many modules into a few bundled assets. Code Splitting allows to load parts for the application on demand. Through \"loaders,\" modules can be CommonJs, AMD, ES6 modules, CSS, Images, JSON, Coffeescript, LESS, ... and your custom stuff."
+    },
+    {
+        "dataLength": 25
+    }
+]This is the end

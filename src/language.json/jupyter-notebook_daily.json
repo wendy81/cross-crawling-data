@@ -1,0 +1,130 @@
+[
+    {
+        "aHref": "https://github.com/adeshpande3/Tensorflow-Programs-and-Tutorials",
+        "aHrefText": "adeshpande3 / Tensorflow-Programs-and-Tutorials",
+        "des": "Implementations of CNNs, RNNs, GANs, etc"
+    },
+    {
+        "aHref": "https://github.com/coells/100days",
+        "aHrefText": "coells / 100days",
+        "des": "100 days of algorithms"
+    },
+    {
+        "aHref": "https://github.com/aymericdamien/TensorFlow-Examples",
+        "aHrefText": "aymericdamien / TensorFlow-Examples",
+        "des": "TensorFlow Tutorial and Examples for beginners"
+    },
+    {
+        "aHref": "https://github.com/caffe2/caffe2",
+        "aHrefText": "caffe2 / caffe2",
+        "des": "Caffe2 is a lightweight, modular, and scalable deep learning framework."
+    },
+    {
+        "aHref": "https://github.com/tensorflow/magenta",
+        "aHrefText": "tensorflow / magenta",
+        "des": "Magenta: Music and Art Generation with Machine Intelligence"
+    },
+    {
+        "aHref": "https://github.com/jakevdp/PythonDataScienceHandbook",
+        "aHrefText": "jakevdp / PythonDataScienceHandbook",
+        "des": "Jupyter Notebooks for the Python Data Science Handbook"
+    },
+    {
+        "aHref": "https://github.com/blue-yonder/tsfresh",
+        "aHrefText": "blue-yonder / tsfresh",
+        "des": "Automatic extraction of relevant features from time series:"
+    },
+    {
+        "aHref": "https://github.com/pydata/parallel-tutorial",
+        "aHrefText": "pydata / parallel-tutorial",
+        "des": "Parallel computing in Python tutorial materials"
+    },
+    {
+        "aHref": "https://github.com/jupyter/docker-stacks",
+        "aHrefText": "jupyter / docker-stacks",
+        "des": "Opinionated stacks of ready-to-run Jupyter applications in Docker."
+    },
+    {
+        "aHref": "https://github.com/fastai/courses",
+        "aHrefText": "fastai / courses",
+        "des": "fast.ai Courses"
+    },
+    {
+        "aHref": "https://github.com/dennybritz/reinforcement-learning",
+        "aHrefText": "dennybritz / reinforcement-learning",
+        "des": "Implementation of Reinforcement Learning Algorithms. Python, OpenAI Gym, Tensorflow. Exercises and Solutions to accompany Sutton's Book and David Silver's course."
+    },
+    {
+        "aHref": "https://github.com/guipsamora/pandas_exercises",
+        "aHrefText": "guipsamora / pandas_exercises",
+        "des": "Practice your pandas skills!"
+    },
+    {
+        "aHref": "https://github.com/natbusa/deepcredit",
+        "aHrefText": "natbusa / deepcredit",
+        "des": "How to predict credit dafaulting?"
+    },
+    {
+        "aHref": "https://github.com/aimacode/aima-python",
+        "aHrefText": "aimacode / aima-python",
+        "des": "Python implementation of algorithms from Russell And Norvig's \"Artificial Intelligence - A Modern Approach\""
+    },
+    {
+        "aHref": "https://github.com/rasbt/python-machine-learning-book",
+        "aHrefText": "rasbt / python-machine-learning-book",
+        "des": "The \"Python Machine Learning\" book code repository and info resource"
+    },
+    {
+        "aHref": "https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python",
+        "aHrefText": "rlabbe / Kalman-and-Bayesian-Filters-in-Python",
+        "des": "Kalman Filter book using Jupyter Notebook. Focuses on building intuition and experience, not formal proofs. Includes Kalman filters,extended Kalman filters, unscented Kalman filters, particle filters, and more. All exercises include solutions."
+    },
+    {
+        "aHref": "https://github.com/junyanz/interactive-deep-colorization",
+        "aHrefText": "junyanz / interactive-deep-colorization",
+        "des": "Deep learning software for colorizing black and white images with a few clicks https://richzhang.github.io"
+    },
+    {
+        "aHref": "https://github.com/ipython/ipython-in-depth",
+        "aHrefText": "ipython / ipython-in-depth",
+        "des": "IPython in-depth Tutorial, first presented at PyCon 2012"
+    },
+    {
+        "aHref": "https://github.com/Brunel-Visualization/Brunel",
+        "aHrefText": "Brunel-Visualization / Brunel",
+        "des": "Brunel Visualization"
+    },
+    {
+        "aHref": "https://github.com/carpedm20/NTM-tensorflow",
+        "aHrefText": "carpedm20 / NTM-tensorflow",
+        "des": "\"Neural Turing Machine\" in Tensorflow"
+    },
+    {
+        "aHref": "https://github.com/MachinesWhoLearn/lectures",
+        "aHrefText": "MachinesWhoLearn / lectures",
+        "des": "Files accompanying UW Machines Who Learn Meetings"
+    },
+    {
+        "aHref": "https://github.com/TensorBox/TensorBox",
+        "aHrefText": "TensorBox / TensorBox",
+        "des": "Object detection in TensorFlow"
+    },
+    {
+        "aHref": "https://github.com/mperrin/poppy",
+        "aHrefText": "mperrin / poppy",
+        "des": "Physical Optics Propagation in Python"
+    },
+    {
+        "aHref": "https://github.com/numerical-mooc/numerical-mooc",
+        "aHrefText": "numerical-mooc / numerical-mooc",
+        "des": "A course in numerical methods with Python for engineers and scientists: currently 5 learning modules, with student assignments."
+    },
+    {
+        "aHref": "https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers",
+        "aHrefText": "CamDavidsonPilon / Probabilistic-Programming-and-Bayesian-Methods-for-Hackers",
+        "des": "aka \"Bayesian Methods for Hackers\": An introduction to Bayesian methods + probabilistic programming with a computation/understanding-first, mathematics-second point of view. All in pure Python ;)"
+    },
+    {
+        "dataLength": 25
+    }
+]This is the end

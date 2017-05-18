@@ -1,0 +1,130 @@
+[
+    {
+        "aHref": "https://github.com/tensorflow/tensorflow",
+        "aHrefText": "tensorflow / tensorflow",
+        "des": "Computation using data flow graphs for scalable machine learning"
+    },
+    {
+        "aHref": "https://github.com/facebook/osquery",
+        "aHrefText": "facebook / osquery",
+        "des": "SQL powered operating system instrumentation, monitoring, and analytics."
+    },
+    {
+        "aHref": "https://github.com/a16z/ai",
+        "aHrefText": "a16z / ai",
+        "des": "Repo for work for AI Survey"
+    },
+    {
+        "aHref": "https://github.com/electron/electron",
+        "aHrefText": "electron / electron",
+        "des": "Build cross platform desktop apps with JavaScript, HTML, and CSS"
+    },
+    {
+        "aHref": "https://github.com/opencv/opencv",
+        "aHrefText": "opencv / opencv",
+        "des": "Open Source Computer Vision Library"
+    },
+    {
+        "aHref": "https://github.com/bitcoin/bitcoin",
+        "aHrefText": "bitcoin / bitcoin",
+        "des": "Bitcoin Core integration/staging tree"
+    },
+    {
+        "aHref": "https://github.com/mapd/mapd-core",
+        "aHrefText": "mapd / mapd-core",
+        "des": "The MapD Core database"
+    },
+    {
+        "aHref": "https://github.com/google/protobuf",
+        "aHrefText": "google / protobuf",
+        "des": "Protocol Buffers - Google's data interchange format"
+    },
+    {
+        "aHref": "https://github.com/CMU-Perceptual-Computing-Lab/openpose",
+        "aHrefText": "CMU-Perceptual-Computing-Lab / openpose",
+        "des": "OpenPose: A Real-Time Multi-Person Keypoint Detection And Multi-Threading C++ Library"
+    },
+    {
+        "aHref": "https://github.com/BVLC/caffe",
+        "aHrefText": "BVLC / caffe",
+        "des": "Caffe: a fast open framework for deep learning."
+    },
+    {
+        "aHref": "https://github.com/tesseract-ocr/tesseract",
+        "aHrefText": "tesseract-ocr / tesseract",
+        "des": "Tesseract Open Source OCR Engine (main repository)"
+    },
+    {
+        "aHref": "https://github.com/LiveAsynchronousVisualizedArchitecture/simdb",
+        "aHrefText": "LiveAsynchronousVisualizedArchitecture / simdb",
+        "des": "A high performance, shared memory, lock free, cross platform, single file, no dependencies, C++11 key-value store"
+    },
+    {
+        "aHref": "https://github.com/apple/swift",
+        "aHrefText": "apple / swift",
+        "des": "The Swift Programming Language"
+    },
+    {
+        "aHref": "https://github.com/dmlc/mxnet",
+        "aHrefText": "dmlc / mxnet",
+        "des": "Lightweight, Portable, Flexible Distributed/Mobile Deep Learning with Dynamic, Mutation-aware Dataflow Dep Scheduler; for Python, R, Julia, Scala, Go, Javascript and more"
+    },
+    {
+        "aHref": "https://github.com/dmlc/xgboost",
+        "aHrefText": "dmlc / xgboost",
+        "des": "Scalable, Portable and Distributed Gradient Boosting (GBDT, GBRT or GBM) Library, for Python, R, Java, Scala, C++ and more. Runs on single machine, Hadoop, Spark, Flink and DataFlow"
+    },
+    {
+        "aHref": "https://github.com/v8/v8",
+        "aHrefText": "v8 / v8",
+        "des": "The official mirror of the V8 git repository"
+    },
+    {
+        "aHref": "https://github.com/Microsoft/CNTK",
+        "aHrefText": "Microsoft / CNTK",
+        "des": "Microsoft Cognitive Toolkit (CNTK), an open source deep-learning toolkit"
+    },
+    {
+        "aHref": "https://github.com/facebookresearch/fastText",
+        "aHrefText": "facebookresearch / fastText",
+        "des": "Library for fast text representation and classification."
+    },
+    {
+        "aHref": "https://github.com/aria2/aria2",
+        "aHrefText": "aria2 / aria2",
+        "des": "aria2 is a lightweight multi-protocol & multi-source, cross platform download utility operated in command-line. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink."
+    },
+    {
+        "aHref": "https://github.com/facebook/rocksdb",
+        "aHrefText": "facebook / rocksdb",
+        "des": "A library that provides an embeddable, persistent key-value store for fast storage."
+    },
+    {
+        "aHref": "https://github.com/yandex/ClickHouse",
+        "aHrefText": "yandex / ClickHouse",
+        "des": "ClickHouse is a free analytic DBMS for big data."
+    },
+    {
+        "aHref": "https://github.com/nlohmann/json",
+        "aHrefText": "nlohmann / json",
+        "des": "JSON for Modern C++"
+    },
+    {
+        "aHref": "https://github.com/pmq20/node-compiler",
+        "aHrefText": "pmq20 / node-compiler",
+        "des": "Compiling your Node.js application into a single executable."
+    },
+    {
+        "aHref": "https://github.com/sivaramambikasaran/HODLR",
+        "aHrefText": "sivaramambikasaran / HODLR",
+        "des": "A fast, accurate direct solver and determinant computation for dense linear systems"
+    },
+    {
+        "aHref": "https://github.com/rethinkdb/rethinkdb",
+        "aHrefText": "rethinkdb / rethinkdb",
+        "des": "The open-source database for the realtime web."
+    },
+    {
+        "dataLength": 25
+    }
+]This is the end

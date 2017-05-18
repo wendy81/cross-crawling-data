@@ -29,7 +29,5 @@ $RECYCLE.BIN/
 
 node_modules/
 .tmp
-/src/components/customer_useless.js
-/src/components/navigation_useless.js
 test
 webpack.test.js

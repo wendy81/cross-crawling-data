@@ -1,0 +1,130 @@
+[
+    {
+        "aHref": "https://github.com/adeshpande3/Tensorflow-Programs-and-Tutorials",
+        "aHrefText": "adeshpande3 / Tensorflow-Programs-and-Tutorials",
+        "des": "Implementations of CNNs, RNNs, GANs, etc"
+    },
+    {
+        "aHref": "https://github.com/coells/100days",
+        "aHrefText": "coells / 100days",
+        "des": "100 days of algorithms"
+    },
+    {
+        "aHref": "https://github.com/aymericdamien/TensorFlow-Examples",
+        "aHrefText": "aymericdamien / TensorFlow-Examples",
+        "des": "TensorFlow Tutorial and Examples for beginners"
+    },
+    {
+        "aHref": "https://github.com/caffe2/caffe2",
+        "aHrefText": "caffe2 / caffe2",
+        "des": "Caffe2 is a lightweight, modular, and scalable deep learning framework."
+    },
+    {
+        "aHref": "https://github.com/jakevdp/PythonDataScienceHandbook",
+        "aHrefText": "jakevdp / PythonDataScienceHandbook",
+        "des": "Jupyter Notebooks for the Python Data Science Handbook"
+    },
+    {
+        "aHref": "https://github.com/tensorflow/magenta",
+        "aHrefText": "tensorflow / magenta",
+        "des": "Magenta: Music and Art Generation with Machine Intelligence"
+    },
+    {
+        "aHref": "https://github.com/umutisik/Eigentechno",
+        "aHrefText": "umutisik / Eigentechno",
+        "des": "Principal Component Analysis on music loops"
+    },
+    {
+        "aHref": "https://github.com/junyanz/interactive-deep-colorization",
+        "aHrefText": "junyanz / interactive-deep-colorization",
+        "des": "Deep learning software for colorizing black and white images with a few clicks https://richzhang.github.io"
+    },
+    {
+        "aHref": "https://github.com/dennybritz/reinforcement-learning",
+        "aHrefText": "dennybritz / reinforcement-learning",
+        "des": "Implementation of Reinforcement Learning Algorithms. Python, OpenAI Gym, Tensorflow. Exercises and Solutions to accompany Sutton's Book and David Silver's course."
+    },
+    {
+        "aHref": "https://github.com/rasbt/python-machine-learning-book",
+        "aHrefText": "rasbt / python-machine-learning-book",
+        "des": "The \"Python Machine Learning\" book code repository and info resource"
+    },
+    {
+        "aHref": "https://github.com/fastai/courses",
+        "aHrefText": "fastai / courses",
+        "des": "fast.ai Courses"
+    },
+    {
+        "aHref": "https://github.com/Hvass-Labs/TensorFlow-Tutorials",
+        "aHrefText": "Hvass-Labs / TensorFlow-Tutorials",
+        "des": "TensorFlow Tutorials with YouTube Videos"
+    },
+    {
+        "aHref": "https://github.com/udacity/deep-learning",
+        "aHrefText": "udacity / deep-learning",
+        "des": "Repo for the Deep Learning Nanodegree Foundations program."
+    },
+    {
+        "aHref": "https://github.com/leonardoaraujosantos/DLMatFramework",
+        "aHrefText": "leonardoaraujosantos / DLMatFramework",
+        "des": "Implementation of Deeplearning library based on my book https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/"
+    },
+    {
+        "aHref": "https://github.com/jupyter/docker-stacks",
+        "aHrefText": "jupyter / docker-stacks",
+        "des": "Opinionated stacks of ready-to-run Jupyter applications in Docker."
+    },
+    {
+        "aHref": "https://github.com/udacity/machine-learning",
+        "aHrefText": "udacity / machine-learning",
+        "des": "Content for Udacity's Machine Learning curriculum"
+    },
+    {
+        "aHref": "https://github.com/fivethirtyeight/data",
+        "aHrefText": "fivethirtyeight / data",
+        "des": "Data and code behind the stories and interactives at FiveThirtyEight"
+    },
+    {
+        "aHref": "https://github.com/wesm/pydata-book",
+        "aHrefText": "wesm / pydata-book",
+        "des": "Materials and IPython notebooks for \"Python for Data Analysis\" by Wes McKinney, published by O'Reilly Media"
+    },
+    {
+        "aHref": "https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python",
+        "aHrefText": "rlabbe / Kalman-and-Bayesian-Filters-in-Python",
+        "des": "Kalman Filter book using Jupyter Notebook. Focuses on building intuition and experience, not formal proofs. Includes Kalman filters,extended Kalman filters, unscented Kalman filters, particle filters, and more. All exercises include solutions."
+    },
+    {
+        "aHref": "https://github.com/blue-yonder/tsfresh",
+        "aHrefText": "blue-yonder / tsfresh",
+        "des": "Automatic extraction of relevant features from time series:"
+    },
+    {
+        "aHref": "https://github.com/LMescheder/AdversarialVariationalBayes",
+        "aHrefText": "LMescheder / AdversarialVariationalBayes",
+        "des": "This repository contains the code to reproduce the core results from the paper \"Adversarial Variational Bayes: Unifying Variational Autoencoders and Generative Adversarial Networks\"."
+    },
+    {
+        "aHref": "https://github.com/nfmcclure/tensorflow_cookbook",
+        "aHrefText": "nfmcclure / tensorflow_cookbook",
+        "des": "Code for Tensorflow Machine Learning Cookbook"
+    },
+    {
+        "aHref": "https://github.com/ml4a/ml4a-guides",
+        "aHrefText": "ml4a / ml4a-guides",
+        "des": "practical guides, tutorials, and code samples for ml4a"
+    },
+    {
+        "aHref": "https://github.com/blei-lab/edward",
+        "aHrefText": "blei-lab / edward",
+        "des": "A library for probabilistic modeling, inference, and criticism. Deep generative models, variational inference. Runs on TensorFlow."
+    },
+    {
+        "aHref": "https://github.com/natbusa/deepcredit",
+        "aHrefText": "natbusa / deepcredit",
+        "des": "How to predict credit dafaulting?"
+    },
+    {
+        "dataLength": 25
+    }
+]This is the end

@@ -1,0 +1,130 @@
+[
+    {
+        "aHref": "https://github.com/keon/algorithms",
+        "aHrefText": "keon / algorithms",
+        "des": "Minimal examples of data structures and algorithms in Python"
+    },
+    {
+        "aHref": "https://github.com/yandex/gixy",
+        "aHrefText": "yandex / gixy",
+        "des": "Nginx configuration static analyzer"
+    },
+    {
+        "aHref": "https://github.com/schollz/howmanypeoplearearound",
+        "aHrefText": "schollz / howmanypeoplearearound",
+        "des": "Count the number of people around you 👨‍👨‍👦 by monitoring wifi signals 📡"
+    },
+    {
+        "aHref": "https://github.com/evilsocket/opensnitch",
+        "aHrefText": "evilsocket / opensnitch",
+        "des": "OpenSnitch is a GNU/Linux port of the Little Snitch application firewall."
+    },
+    {
+        "aHref": "https://github.com/tensorflow/models",
+        "aHrefText": "tensorflow / models",
+        "des": "Models built with TensorFlow"
+    },
+    {
+        "aHref": "https://github.com/facebookresearch/ParlAI",
+        "aHrefText": "facebookresearch / ParlAI",
+        "des": "A framework for training and evaluating AI models on a variety of openly available dialog datasets."
+    },
+    {
+        "aHref": "https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix",
+        "aHrefText": "junyanz / pytorch-CycleGAN-and-pix2pix",
+        "des": "Image-to-image translation in PyTorch (e.g. horse2zebra, edges2cats, and more)"
+    },
+    {
+        "aHref": "https://github.com/ageitgey/face_recognition",
+        "aHrefText": "ageitgey / face_recognition",
+        "des": "The world's simplest facial recognition api for Python and the command line"
+    },
+    {
+        "aHref": "https://github.com/misterch0c/shadowbroker",
+        "aHrefText": "misterch0c / shadowbroker",
+        "des": "The Shadow Brokers \"Lost In Translation\" leak"
+    },
+    {
+        "aHref": "https://github.com/zzw922cn/Automatic_Speech_Recognition",
+        "aHrefText": "zzw922cn / Automatic_Speech_Recognition",
+        "des": "End-to-end automatic speech recognition from scratch in Tensorflow"
+    },
+    {
+        "aHref": "https://github.com/vinta/awesome-python",
+        "aHrefText": "vinta / awesome-python",
+        "des": "A curated list of awesome Python frameworks, libraries, software and resources"
+    },
+    {
+        "aHref": "https://github.com/overshard/timestrap",
+        "aHrefText": "overshard / timestrap",
+        "des": "Time tracking and invoicing you can host anywhere. Full export support in multiple formats and easily extensible."
+    },
+    {
+        "aHref": "https://github.com/fchollet/keras",
+        "aHrefText": "fchollet / keras",
+        "des": "Deep Learning library for Python. Convnets, recurrent neural networks, and more. Runs on TensorFlow or Theano."
+    },
+    {
+        "aHref": "https://github.com/donnemartin/system-design-primer",
+        "aHrefText": "donnemartin / system-design-primer",
+        "des": "Learn how to design large-scale systems. Prep for the system design interview. Includes Anki flashcards."
+    },
+    {
+        "aHref": "https://github.com/jinfagang/weibo_terminater",
+        "aHrefText": "jinfagang / weibo_terminater",
+        "des": "Final Weibo Crawler Scrap Anything From Weibo, comments, weibo contents, followers, anythings. The Terminator"
+    },
+    {
+        "aHref": "https://github.com/josephmisiti/awesome-machine-learning",
+        "aHrefText": "josephmisiti / awesome-machine-learning",
+        "des": "A curated list of awesome Machine Learning frameworks, libraries and software."
+    },
+    {
+        "aHref": "https://github.com/rlcode/reinforcement-learning",
+        "aHrefText": "rlcode / reinforcement-learning",
+        "des": "Minimal and Clean Reinforcement Learning Examples"
+    },
+    {
+        "aHref": "https://github.com/django/django",
+        "aHrefText": "django / django",
+        "des": "The Web framework for perfectionists with deadlines."
+    },
+    {
+        "aHref": "https://github.com/airbnb/superset",
+        "aHrefText": "airbnb / superset",
+        "des": "Superset is a modern, enterprise-ready business intelligence web application"
+    },
+    {
+        "aHref": "https://github.com/xiyouMc/WebHubBot",
+        "aHrefText": "xiyouMc / WebHubBot",
+        "des": "Python + Scrapy + MongoDB . 5 million data per day !!!💥 The world's largest website."
+    },
+    {
+        "aHref": "https://github.com/rg3/youtube-dl",
+        "aHrefText": "rg3 / youtube-dl",
+        "des": "Command-line program to download videos from YouTube.com and other video sites"
+    },
+    {
+        "aHref": "https://github.com/donnemartin/interactive-coding-challenges",
+        "aHrefText": "donnemartin / interactive-coding-challenges",
+        "des": "Huge update! Interactive Python coding interview challenges (algorithms and data structures). Includes Anki flashcards."
+    },
+    {
+        "aHref": "https://github.com/scikit-learn/scikit-learn",
+        "aHrefText": "scikit-learn / scikit-learn",
+        "des": "scikit-learn: machine learning in Python"
+    },
+    {
+        "aHref": "https://github.com/littlecodersh/ItChat",
+        "aHrefText": "littlecodersh / ItChat",
+        "des": "A complete and graceful API for Wechat. 微信个人号接口、微信机器人及命令行微信，三十行即可自定义个人号机器人。"
+    },
+    {
+        "aHref": "https://github.com/pallets/flask",
+        "aHrefText": "pallets / flask",
+        "des": "A microframework based on Werkzeug, Jinja2 and good intentions"
+    },
+    {
+        "dataLength": 25
+    }
+]This is the end

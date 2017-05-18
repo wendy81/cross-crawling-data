@@ -1,0 +1,130 @@
+[
+    {
+        "aHref": "https://github.com/JetBrains/kotlin",
+        "aHrefText": "JetBrains / kotlin",
+        "des": "The Kotlin Programming Language"
+    },
+    {
+        "aHref": "https://github.com/xmuSistone/android-pile-layout",
+        "aHrefText": "xmuSistone / android-pile-layout",
+        "des": "An abnormal horizontal ListView-like pile layout."
+    },
+    {
+        "aHref": "https://github.com/Hitomis/transferee",
+        "aHrefText": "Hitomis / transferee",
+        "des": "一个帮助您完成从缩略图到原图无缝过渡转变的神奇组件"
+    },
+    {
+        "aHref": "https://github.com/afollestad/aesthetic",
+        "aHrefText": "afollestad / aesthetic",
+        "des": "[BETA] A fast and easy to use plug-and-play dynamic theme engine. Powered by Rx, for Android apps."
+    },
+    {
+        "aHref": "https://github.com/spring-projects/spring-boot",
+        "aHrefText": "spring-projects / spring-boot",
+        "des": "Spring Boot"
+    },
+    {
+        "aHref": "https://github.com/aritraroy/UltimateAndroidReference",
+        "aHrefText": "aritraroy / UltimateAndroidReference",
+        "des": "🚀 Ultimate Android Reference - Your Road to Become a Better Android Developer"
+    },
+    {
+        "aHref": "https://github.com/Yasic/ParticleTextView",
+        "aHrefText": "Yasic / ParticleTextView",
+        "des": "一个用粒子动画显示文字的 Android 自定义 View"
+    },
+    {
+        "aHref": "https://github.com/yewei02538/HiPermission",
+        "aHrefText": "yewei02538 / HiPermission",
+        "des": "A simple and beautiful runtime permission library on Android."
+    },
+    {
+        "aHref": "https://github.com/blackbbc/Tucao",
+        "aHrefText": "blackbbc / Tucao",
+        "des": "http://www.tucao.tv/ 吐槽第三方Android客户端"
+    },
+    {
+        "aHref": "https://github.com/seiginonakama/BlockCanaryEx",
+        "aHrefText": "seiginonakama / BlockCanaryEx",
+        "des": "make performance bottleneck detection easily when app blocked"
+    },
+    {
+        "aHref": "https://github.com/Blankj/AndroidUtilCode",
+        "aHrefText": "Blankj / AndroidUtilCode",
+        "des": "🔥 Android developers should collect the following utils(updating)"
+    },
+    {
+        "aHref": "https://github.com/jpush/aurora-imui",
+        "aHrefText": "jpush / aurora-imui",
+        "des": "General IM UI components. Android/iOS ready. 通用 IM 聊天 UI 组件，已经同时支持 Android/iOS。"
+    },
+    {
+        "aHref": "https://github.com/ome450901/SimpleRatingBar",
+        "aHrefText": "ome450901 / SimpleRatingBar",
+        "des": "A simple RatingBar that you can easier custom animations"
+    },
+    {
+        "aHref": "https://github.com/ReactiveX/RxJava",
+        "aHrefText": "ReactiveX / RxJava",
+        "des": "RxJava – Reactive Extensions for the JVM – a library for composing asynchronous and event-based programs using observable sequences for the Java VM."
+    },
+    {
+        "aHref": "https://github.com/googlesamples/android-architecture-components",
+        "aHrefText": "googlesamples / android-architecture-components",
+        "des": ""
+    },
+    {
+        "aHref": "https://github.com/shuzheng/zheng",
+        "aHrefText": "shuzheng / zheng",
+        "des": "基于Spring+SpringMVC+Mybatis分布式敏捷开发系统架构，提供整套公共微服务服务模块：集中权限管理（单点登录）、内容管理、支付中心、用户管理（支持第三方登录）、微信平台、存储系统、配置中心、日志分析、任务和通知等，支持服务治理、监控和追踪，努力为中小型企业打造全方位J2EE企业级开发解决方案。"
+    },
+    {
+        "aHref": "https://github.com/alibaba/vlayout",
+        "aHrefText": "alibaba / vlayout",
+        "des": "Project vlayout is a powerfull LayoutManager extension for RecyclerView, it provides a group of layouts for RecyclerView. Make it able to handle a complicate situation when grid, list and other layouts in the same recyclerview."
+    },
+    {
+        "aHref": "https://github.com/PhilJay/MPAndroidChart",
+        "aHrefText": "PhilJay / MPAndroidChart",
+        "des": "A powerful Android chart view / graph view library, supporting line- bar- pie- radar- bubble- and candlestick charts as well as scaling, dragging and animations."
+    },
+    {
+        "aHref": "https://github.com/iluwatar/java-design-patterns",
+        "aHrefText": "iluwatar / java-design-patterns",
+        "des": "Design patterns implemented in Java"
+    },
+    {
+        "aHref": "https://github.com/elastic/elasticsearch",
+        "aHrefText": "elastic / elasticsearch",
+        "des": "Open Source, Distributed, RESTful Search Engine"
+    },
+    {
+        "aHref": "https://github.com/square/okhttp",
+        "aHrefText": "square / okhttp",
+        "des": "An HTTP+HTTP/2 client for Android and Java applications."
+    },
+    {
+        "aHref": "https://github.com/fcannizzaro/jsoup-annotations",
+        "aHrefText": "fcannizzaro / jsoup-annotations",
+        "des": "Jsoup Annotations POJO"
+    },
+    {
+        "aHref": "https://github.com/spring-projects/spring-framework",
+        "aHrefText": "spring-projects / spring-framework",
+        "des": "The Spring Framework"
+    },
+    {
+        "aHref": "https://github.com/zhihu/Matisse",
+        "aHrefText": "zhihu / Matisse",
+        "des": "🎆 A well-designed local image and video selector for Android"
+    },
+    {
+        "aHref": "https://github.com/CymChad/BaseRecyclerViewAdapterHelper",
+        "aHrefText": "CymChad / BaseRecyclerViewAdapterHelper",
+        "des": "Powerful and flexible RecyclerAdapter, www.recyclerview.org"
+    },
+    {
+        "dataLength": 25
+    }
+]This is the end

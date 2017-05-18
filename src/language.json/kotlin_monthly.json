@@ -1,0 +1,130 @@
+[
+    {
+        "aHref": "https://github.com/Kotlin/anko",
+        "aHrefText": "Kotlin / anko",
+        "des": "Pleasant Android application development"
+    },
+    {
+        "aHref": "https://github.com/square/kotlinpoet",
+        "aHrefText": "square / kotlinpoet",
+        "des": "A Kotlin API for generating .kt source files."
+    },
+    {
+        "aHref": "https://github.com/JetBrains/kotlin-native",
+        "aHrefText": "JetBrains / kotlin-native",
+        "des": ""
+    },
+    {
+        "aHref": "https://github.com/KotlinBy/awesome-kotlin",
+        "aHrefText": "KotlinBy / awesome-kotlin",
+        "des": "A curated list of awesome Kotlin related stuff Inspired by awesome-java."
+    },
+    {
+        "aHref": "https://github.com/ReactiveX/RxKotlin",
+        "aHrefText": "ReactiveX / RxKotlin",
+        "des": "RxJava bindings for Kotlin"
+    },
+    {
+        "aHref": "https://github.com/wuapnjie/PoiShuhui-Kotlin",
+        "aHrefText": "wuapnjie / PoiShuhui-Kotlin",
+        "des": "一个用Kotlin写的简单漫画APP"
+    },
+    {
+        "aHref": "https://github.com/Kotlin/ktor",
+        "aHrefText": "Kotlin / ktor",
+        "des": "Web backend framework for Kotlin"
+    },
+    {
+        "aHref": "https://github.com/Kotlin/kotlin-fullstack-sample",
+        "aHrefText": "Kotlin / kotlin-fullstack-sample",
+        "des": "Kotlin Full-stack Application Example"
+    },
+    {
+        "aHref": "https://github.com/Kotlin/kotlin-koans",
+        "aHrefText": "Kotlin / kotlin-koans",
+        "des": "Kotlin workshop"
+    },
+    {
+        "aHref": "https://github.com/TwidereProject/Twidere-Android",
+        "aHrefText": "TwidereProject / Twidere-Android",
+        "des": ""
+    },
+    {
+        "aHref": "https://github.com/inorichi/tachiyomi",
+        "aHrefText": "inorichi / tachiyomi",
+        "des": "Free and open source manga reader for Android"
+    },
+    {
+        "aHref": "https://github.com/edvin/tornadofx",
+        "aHrefText": "edvin / tornadofx",
+        "des": "Lightweight JavaFX Framework for Kotlin"
+    },
+    {
+        "aHref": "https://github.com/JetBrains/kotlin-examples",
+        "aHrefText": "JetBrains / kotlin-examples",
+        "des": "Various examples for Kotlin"
+    },
+    {
+        "aHref": "https://github.com/corda/corda",
+        "aHrefText": "corda / corda",
+        "des": "Corda is a distributed ledger platform designed to record, manage and automate legal agreements between business partners. Designed by (and for) the world's largest financial institutions, it offers a unique response to the privacy and scalability challenges facing decentralised applications."
+    },
+    {
+        "aHref": "https://github.com/LWJGL/lwjgl3",
+        "aHrefText": "LWJGL / lwjgl3",
+        "des": "LWJGL is a Java library that enables cross-platform access to popular native APIs useful in the development of graphics (OpenGL), audio (OpenAL) and parallel computing (OpenCL) applications."
+    },
+    {
+        "aHref": "https://github.com/intellij-rust/intellij-rust",
+        "aHrefText": "intellij-rust / intellij-rust",
+        "des": "Rust plugin for the IntelliJ Platform: https://intellij-rust.github.io/"
+    },
+    {
+        "aHref": "https://github.com/Kotlin/kotlinx.coroutines",
+        "aHrefText": "Kotlin / kotlinx.coroutines",
+        "des": "Libraries built upon Kotlin coroutines"
+    },
+    {
+        "aHref": "https://github.com/Yalantis/SearchFilter",
+        "aHrefText": "Yalantis / SearchFilter",
+        "des": "Implementing Search Filter Animation in Kotlin for Quora Meets LinkedIn, Our App Design Concept"
+    },
+    {
+        "aHref": "https://github.com/square/sqldelight",
+        "aHrefText": "square / sqldelight",
+        "des": "Generates Java models from CREATE TABLE statements."
+    },
+    {
+        "aHref": "https://github.com/TonnyL/FanfouHandpick",
+        "aHrefText": "TonnyL / FanfouHandpick",
+        "des": "📖 A Fanfou Handpick Client Developed by Kotlin"
+    },
+    {
+        "aHref": "https://github.com/nekocode/Kotlin-Android-Template",
+        "aHrefText": "nekocode / Kotlin-Android-Template",
+        "des": "🚀 An Android project template using Kotlin/MVP/ReactiveX. It provides a generator to fast create a Kotlin Android template project."
+    },
+    {
+        "aHref": "https://github.com/SimpleMobileTools/Simple-Calendar",
+        "aHrefText": "SimpleMobileTools / Simple-Calendar",
+        "des": "A simple calendar with events, customizable widget and no ads."
+    },
+    {
+        "aHref": "https://github.com/gildor/kotlin-coroutines-okhttp",
+        "aHrefText": "gildor / kotlin-coroutines-okhttp",
+        "des": "Kotlin Coroutines await() extension for OkHttp Call"
+    },
+    {
+        "aHref": "https://github.com/thomasnield/kotlin-statistics",
+        "aHrefText": "thomasnield / kotlin-statistics",
+        "des": "Idiomatic statistical operators for Kotlin"
+    },
+    {
+        "aHref": "https://github.com/ligi/SurvivalManual",
+        "aHrefText": "ligi / SurvivalManual",
+        "des": "Libre Survival Manual for Android with offline in mind"
+    },
+    {
+        "dataLength": 25
+    }
+]This is the end

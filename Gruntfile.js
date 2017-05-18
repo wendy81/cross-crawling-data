@@ -90,12 +90,12 @@ module.exports = function (grunt) {
             src: ['<%= pkg.src %>/favicon.ico'],
             dest: '<%= pkg.current %>/',
             filter: 'isFile'
-          },         
+          },
           {
             flatten: true,
             expand: true,
-            src: ['<%= pkg.src %>/data/*'],
-            dest: '<%= pkg.dist %>/data/'
+            src: ['<%= pkg.src %>/dataLanguages/*'],
+            dest: '<%= pkg.dist %>/dataLanguages/'
           }
         ]
       }
