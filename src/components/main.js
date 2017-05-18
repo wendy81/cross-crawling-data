@@ -1,3 +1,7 @@
+/*
+* spin 在切换语言时如何加载
+* tab 切换后内容List的渲染问题
+*/
 'use strict';
 const React = require('react');
 const ReactDOM = require('react-dom');
@@ -76,23 +80,6 @@ class TabComponent extends React.Component {
 			listCount: count
 		});
 	}
-	shoWarnig (amount) {  //这是用来判断当 List组件的属性language改变时,有来触发的函数
-		/*
-		* undefined  这个显示原因,现在不知道
-		* amount数组为空数值或者有值时都为true, 故需要用amount.length来判断
-		*/
-		if(amount !== undefined) {
-			if(!amount.length) {
-				this.setState({
-					shoWarnig: true
-				});
-			}else {
-				this.setState({
-					shoWarnig: false
-				});
-			}
-		}
-	}
 	render() {
 		let tabData = ['daily', 'weekly', 'monthly'];
 		let tabList = [];
@@ -123,8 +110,6 @@ class TabComponent extends React.Component {
 			</TabPane>;
 			tabList.push(listHtml);
 		});
-		console.log('tabList');
-		console.log(tabList);
 		return (
 			<Tabs defaultActiveKey="0">
 				{tabList}
@@ -326,8 +311,10 @@ class List extends React.Component {
 			}));
 	}
 	/*
-	* 
-	* 当
+	* 说明属性或状态变化时需不需要做渲染
+	* 问题当点击当前标签时, 当前list会渲染的次数
+	* 第一个标签2次,第二个标签1(前第1标签)+2(当前标签）,第3个标签1(前第1标签)+1(前第2标签)+2(当前标签）
+	* ???  渲染次数？？？
 	*/
 	shouldComponentUpdate(nextProps) {
 		// console.log(nextProps);
@@ -356,8 +343,6 @@ class List extends React.Component {
 		}
 		return true;
 	}
-
-
 	/*接收到新的language属性时调用这个函数*/
 	componentWillUpdate(nextProps) {
 		if (this.props.language !== nextProps.language) {
@@ -387,6 +372,30 @@ class List extends React.Component {
 			}));
 		}
 	}
+
+	// clickEventHref (aHref) {
+	// 	const w = window.open('about:blank');
+	// 	w.location.href = aHref;
+	// }
+	// shoWarnig (amount) {  //这是用来判断当 List组件的属性language改变时,有来触发的函数
+		/*
+	 	* undefined  这个显示原因,现在不知道
+	 	* amount数组为空数值或者有值时都为true, 故需要用amount.length来判断
+		*/
+	// 	if(amount !== undefined) {
+	// 		if(!amount.length) {
+	// 			this.setState({
+	// 				shoWarnig: true
+	// 			});
+	// 		}else {
+	// 			this.setState({
+	// 				shoWarnig: false
+	// 			});
+	// 		}
+	// 	}
+	// }
+
+
 	render() {
 	/*判断数据是否加载*/
 	let warnigInfo = [];
@@ -431,11 +440,10 @@ class List extends React.Component {
 
 		if(dataCon[0]) {
 			dataCon.pop();
-			console.log(dataCon);
 			dataCon.map(function(v, i) {
 				let index = i + 1;
 				let listHtml = <Panel header={v.aHrefText} key={index} style={customPanelStyle}>
-					<p>{v.des}</p>
+					<p><a href={v.aHref} target='_blank'>{v.des}</a></p>
 					</Panel>;
 				dataArry.push(listHtml);
 				/* 把所有json对象的下标都加载到扩展数组中collapseActiveKey*/
