@@ -59,7 +59,7 @@ http.createServer(function(req, res) {
                     'Access-Control-Allow-Origin': req.headers.origin
                 });
 
-                var writeLanguagePath2 = __dirname + '/data/';
+                var writeLanguagePath2 = __dirname + '/dataLanguages/';
                 var options = { flags: 'w',
                                 encoding: 'utf8',
                                 mode: 0666 };
@@ -68,21 +68,28 @@ http.createServer(function(req, res) {
                         fs.mkdir(writeLanguagePath2,0777, function (err) {
                           if (err) throw err;
                         });
-                        var writeStream = fs.createWriteStream(writeLanguagePath2 + 'languages.json',options);
-                        writeStream.write(JSON.stringify(languagesArry, null, 4));
-                        writeStream.end('This is the end\n');
-                        writeStream.on('finish', () => {
-                            console.error('All writes are now complete.');
-                        });                  
                     }
+                    var writeStream = fs.createWriteStream(writeLanguagePath2 + 'languages.json',options);
+                    writeStream.write(JSON.stringify(languagesArry, null, 4));
+                    writeStream.end();
+                    writeStream.on('finish', () => {
+                        console.error('All writes are now complete.');
+                    });                      
                 });
 
+
                 res.end(JSON.stringify(listArry) + '\n');
+                res.on('error', (e) => {
+                    console.log(`Got error: ${e.message}`);
+                })
             } else {
                 console.log(error)
             }
         }
-    )
+    ).on('error', (e) => {
+    console.log(`Got error: ${e.message}`);
+});
+
 }
 }).listen(8888);
 // 终端打印如下信息

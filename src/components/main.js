@@ -17,31 +17,56 @@ const Panel = Collapse.Panel;
 require('antd/dist/antd.css');
 
 const $ = require('jquery');
+
+class Main extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {currentLanguage: 'javascript'};
+	}
+	/*
+	* 当前所选语言选项
+	*/
+	getLanguage (currentLanguage) {
+		this.setState({
+			currentLanguage: currentLanguage
+		});
+	}
+	render() {
+		return (
+			<div>
+				<Language defaultValue= {this.state.currentLanguage} currentLanguage={language => this.getLanguage(language)}/>
+				<TabComponent currentLanguage = {this.state.currentLanguage} />
+			</div>
+		);
+	}
+}
 /*
 tab切换,装载List组件,装载相当于运行一次List组件,即每次装载List组件,都会走一次生命周期,只需要每次在渲染后调用componentDidMount函数装载不同的数据即可
 */
-class Main extends React.Component {
+class TabComponent extends React.Component {
 	constructor(props) {
 		super(props);
 		/*
 		* listCount 当前选中的tab的数据条数
 		* shoWarnig 当前语言没有对应的数据时显示对应的提醒信息
 		* currentLanguage 当前语言
-		* selectAllOptions 所有语言列表
 		*/
-		this.state = {listCount: 0, shoWarnig: false, showSpin: false, currentLanguage: 'javascript', selectAllOptions: []};
+		this.state = {listCount: 0};
 	}
 	changeTab (v) {
 		/*
+		* 这个项目中没有使用
 		* allTab 当前选中的tab
 		* allTab[0]当前选中的tab的DOM对象
 		* $(allTab[0]) 转换成jquery对象
 		*/
-		let allTab = $('[role="tab"]').eq(v);
-		let currentTab = ($(allTab[0]).text());
-		this.setState({
-			tabVal: currentTab
-		});
+		console.log(v);
+		return false;
+		// let allTab = $('[role="tab"]').eq(v);
+		// let currentTab = ($(allTab[0]).text());
+		// this.setState({
+		// 	tabVal: currentTab
+		// });
 	}
 	/*
 	* 各Tab的总数据条数
@@ -68,34 +93,11 @@ class Main extends React.Component {
 			}
 		}
 	}
-	/*
-	* 当前所选语言选项
-	* 切换语言选择  shoWarnig, showSpin 还原都不显示
-	*/
-	getLanguage (currentLanguage) {
-		this.setState({
-			currentLanguage: currentLanguage,
-			shoWarnig: false,
-			showSpin: true
-		});
-	}
-	/*
-	* 所有语言选项列表
-	*/
-	getAllOptions (optionsVal) {
-		let getAllOptionsVal = optionsVal.splice(3);
-		this.setState({
-			selectAllOptions: getAllOptionsVal
-		});
-	}
 	render() {
 		let tabData = ['daily', 'weekly', 'monthly'];
 		let tabList = [];
 		let listCount = this.state.listCount;
-		let listHtml, cardHtml;
-		if( this.state.shoWarnig ) {
-			cardHtml = <ShoWarnig currentLanguage = {this.state.currentLanguage} />;
-		}
+		let listHtml;
 		if( listCount === 0 ) {
 			listCount = '';
 		} else {
@@ -109,31 +111,24 @@ class Main extends React.Component {
 				*  List字组件中 得到数据  以props的形式传给 List本身（其中的属性以函数得到）
 				* 通过函数可以更改state的值,从而 父组件以state的形式获得数据
 				* @params currentTab 当前Tab内容
-				* @params getAllOptions 得到所有语言函数
 				* @params countAmount 当前tab的所有数据条数函数
 				* @params language 当前语言属性
 				*/
 				}
-				<List currentTab = {v}
-				getAllOptions = {optionsVal => this.getAllOptions(optionsVal)}
+				<List key={v} currentTab = {v}
 				countAmount = {count => this.func(count)}
-				language = {this.state.currentLanguage}
-				shoWarnig = {amount => this.shoWarnig(amount)}
-				shoWarnigStatus = {this.state.shoWarnig}
-				showSpin = {this.state.showSpin}
-				// mainSource={ (language, currentTab) => { $.get('http://localhost:8888/src/components/server.js/' + language + '?since=' + currentTab); } }
+				currentCount = {this.state.listCount}
+				language = {this.props.currentLanguage}
 				/>
 			</TabPane>;
 			tabList.push(listHtml);
 		});
+		console.log('tabList');
+		console.log(tabList);
 		return (
-			<div>
-				<Language getAllOptions={this.state.selectAllOptions} currentLanguage={language => this.getLanguage(language)}/>
-				<Tabs defaultActiveKey="0">
-					{tabList}
-				</Tabs>
-				{cardHtml}
-			</div>
+			<Tabs defaultActiveKey="0">
+				{tabList}
+			</Tabs>
 		);
 	}
 }
@@ -178,26 +173,29 @@ class ShoWspin extends React.Component {
 		);
 	}
 }
-
+/*
+* 用来显示语言列表select
+*/
 class Language extends React.Component {
 	constructor(props) { //初始化this.state
 		super(props);
-		this.state = {loading: true, error: null, data: null};
+		this.state = {loading: true, error: null, dataLanguages: null};
 	}
-/*初始化渲染执行之后立刻调用一次*/
+	/*初始化渲染执行之后立刻调用一次*/
 	componentDidMount() {
-		let source = $.get('./data/language.json');
+		let source = $.get('../dataLanguages/languages.json');
 		source.then(
 			value => {
 				this.setState({
 				loading: true,
-				data: value
+				dataLanguages: value
 			});
-		},
+			},
 			error => this.setState({
 				loading: false,
 				error: error
-			}));
+			})
+		);
 	}
 	handleChange(value) {
 		this.props.currentLanguage(value);
@@ -219,7 +217,8 @@ class Language extends React.Component {
 		* new Set([])用来过滤数组中重复的数据
 		* Array.from() 将set结构转化为数组
 		*/
-		let selectOptionsVals = new Set(this.props.getAllOptions);
+		let data = this.state.dataLanguages || '[]';
+		let selectOptionsVals = new Set(data);
 		let upperArry = [];
 		for(let val of selectOptionsVals) {
 			/* 把所有选项变成大写 */
@@ -266,7 +265,14 @@ class Language extends React.Component {
 				optionsArry.push(optionHtml);
 			});
 
-			selectHtml = <Select showSearch defaultValue="javascript" style={{ width: '100%' }} onChange={(v) => { this.handleChange(v); }} optionFilterProp="children" filterOption={(input, option) => option.props.value.toLowerCase().indexOf(input.toLowerCase()) >= 0}>
+			selectHtml = <Select
+						showSearch
+						defaultValue={this.props.defaultValue}
+						style={{ width: '100%' }}
+						onChange={(v) => { this.handleChange(v); }}
+						optionFilterProp="children"
+						filterOption={(input, option) => option.props.value.toLowerCase().indexOf(input.toLowerCase()) >= 0}
+						>
 				{optionsArry}
 			</Select>;
 		}
@@ -279,13 +285,12 @@ class Language extends React.Component {
 class List extends React.Component {
 	constructor(props) { //初始化this.state
 		super(props);
-		this.state = {loading: true, error: null, data: null};
+		this.state = {loading: true, error: null, data: null, shoWarnig: false, showSpin: true};
 	}
 	/*初始化渲染执行之后立刻调用一次*/
 	componentDidMount() {
 		/* let initStartTime = Date.now();*/
-		let source = $.get('http://localhost:8888/src/components/server.js/' + this.props.language + '?since=' + this.props.currentTab);
-		// let source = this.props.mainSource(this.props.language, this.props.currentTab);
+		let source = $.get('http://localhost:8888/' + this.props.language + '?since=' + this.props.currentTab);
 		source.then(
 			value => {
 				/* 计算数据从服务器请求回来后的加载时间（进度）*/
@@ -304,28 +309,63 @@ class List extends React.Component {
 			* 这里放到componentDidMount函数中原因:由于要用setState函数修改状态,不能放到reder中,不然会无限循环
 			* @param dataListArry 返回所有数据的条数,用来更改setState的状态
 			* @param languagesArry 返回的所有语言数组
-			* @getAllOptions  函数用来setState所有语言列表
 			*/
 			let data = JSON.parse(value);
-			let dataListArry = data.listArry;
-			let languagesArry = data.languagesArry;
+			let dataListArry = data;
 			/*对应的Tab标签显示的数据条数*/
 			this.props.countAmount(dataListArry.pop().dataLength);
-
-			/*对应的语言选择列表,只需要在初始化的时候加载一次就ok了*/
-			this.props.getAllOptions(languagesArry);
+			if(dataListArry.length === 0) {
+				this.setState({shoWarnig: true});
+			} else {
+				this.setState({shoWarnig: false});
+			}
 		},
 			error => this.setState({
 				loading: false,
 				error: error
 			}));
 	}
+	/*
+	* 
+	* 当
+	*/
+	shouldComponentUpdate(nextProps) {
+		// console.log(nextProps);
+		// console.log(this.props);
+		// console.log(nextState);
+		// console.log(this.state);
+		/*
+		* data为空时不渲染
+		*/
+		if(this.state.data === null) {
+			return false;
+		}
+		/*
+		* currentCount有没有加载数据都不渲染,这个值是针对TabPane的,对于TabPane下面的内容List组件没有任何意思
+		*/
+		if(this.props.currentCount !== nextProps.currentCount) {
+			return true;
+		} else {
+			return true;
+		}
+		/*
+		* language当前language更新后要渲染
+		*/
+		if(this.props.language === nextProps.language) {
+			return false;
+		}
+		return true;
+	}
+
+
 	/*接收到新的language属性时调用这个函数*/
 	componentWillUpdate(nextProps) {
 		if (this.props.language !== nextProps.language) {
-
-		let source = $.get('http://localhost:8888/src/components/server.js/' + nextProps.language + '?since=' + this.props.currentTab);
-		// let source = this.props.mainSource(nextProps.language, this.props.currentTab);
+		/*
+		* select一切换,则 shoWarnig为false
+		*/
+		this.setState({shoWarnig: false});
+		let source = $.get('http://localhost:8888/' + nextProps.language + '?since=' + this.props.currentTab);
 		source.then(
 			value => {
 				this.setState({
@@ -333,9 +373,13 @@ class List extends React.Component {
 				data: value
 			});
 			let data = JSON.parse(value);
-			let dataListArry = data.listArry;
+			let dataListArry = data;
 			this.props.countAmount(dataListArry.pop().dataLength);
-			this.props.shoWarnig(dataListArry);
+			if(dataListArry.length === 0) {
+				this.setState({shoWarnig: true});
+			} else {
+				this.setState({shoWarnig: false});
+			}
 		},
 			error => this.setState({
 				loading: false,
@@ -370,8 +414,9 @@ class List extends React.Component {
 		marginTop: '0px'
 	};
 	let page = this.state.data || '[]';
-	let dataCon = (JSON.parse(page)).listArry || [];
+	let dataCon = JSON.parse(page) || [];
 	let dataArry = [], spinArry = [], collapseActiveKey = [];
+	let cardHtml;
 
 	/* 计算数据在组件 所有数据下载时间 － 第一次渲染后加载时间 ,根据时间计算百分比显示进度条
 	现在是不知道怎么判断Progress组件的 percent属性动态变化,下面这个例子会显示多个Progress组件,正确的只要求显示一个Progress组件
@@ -386,6 +431,7 @@ class List extends React.Component {
 
 		if(dataCon[0]) {
 			dataCon.pop();
+			console.log(dataCon);
 			dataCon.map(function(v, i) {
 				let index = i + 1;
 				let listHtml = <Panel header={v.aHrefText} key={index} style={customPanelStyle}>
@@ -395,13 +441,21 @@ class List extends React.Component {
 				/* 把所有json对象的下标都加载到扩展数组中collapseActiveKey*/
 				collapseActiveKey.push(String(index));
 			});
-		} else if(!this.props.shoWarnigStatus) {
+		} else if(!this.state.shoWarnig) {
 			/*
 			* 这里需要加shoWarnigStatus这个判断条件 为true
 			*/
 			spinArry.push(<ShoWspin key='spin' />);
 		}
-
+		/*
+		* 如果shoWarnig为true
+		*/
+		if( this.state.shoWarnig ) {
+			cardHtml = <ShoWarnig currentLanguage = {this.props.language} />;
+		}
+		// if( this.state.showSpin ) {
+		// 	spinArry.push(<ShoWspin key='spin' />);
+		// }
 		// console.log(React.Children.count(dataArry));
 		return (
 			<div>
@@ -415,6 +469,7 @@ class List extends React.Component {
 				{spinArry}
 				{/*数据加载完成后的效果显示*/}
 				<Collapse key={dataArry} style={collapeStyle} bordered={false} defaultActiveKey={collapseActiveKey}>{dataArry}</Collapse>
+				{cardHtml}
 			</div>
 		);
 	}
