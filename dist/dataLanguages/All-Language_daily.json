@@ -1,0 +1,130 @@
+[
+    {
+        "aHref": "https://github.com/JetBrains/kotlin",
+        "aHrefText": "JetBrains / kotlin",
+        "des": "The Kotlin Programming Language"
+    },
+    {
+        "aHref": "https://github.com/googlesamples/android-architecture-components",
+        "aHrefText": "googlesamples / android-architecture-components",
+        "des": ""
+    },
+    {
+        "aHref": "https://github.com/huanglizhuo/kotlin-in-chinese",
+        "aHrefText": "huanglizhuo / kotlin-in-chinese",
+        "des": "kotlin 官方文档"
+    },
+    {
+        "aHref": "https://github.com/desktop/desktop",
+        "aHrefText": "desktop / desktop",
+        "des": "Simple collaboration from your desktop"
+    },
+    {
+        "aHref": "https://github.com/Kotlin/anko",
+        "aHrefText": "Kotlin / anko",
+        "des": "Pleasant Android application development"
+    },
+    {
+        "aHref": "https://github.com/tensorflow/tensorflow",
+        "aHrefText": "tensorflow / tensorflow",
+        "des": "Computation using data flow graphs for scalable machine learning"
+    },
+    {
+        "aHref": "https://github.com/lovoo/goka",
+        "aHrefText": "lovoo / goka",
+        "des": "Goka is a compact yet powerful distributed stream processing library for Apache Kafka written in Go."
+    },
+    {
+        "aHref": "https://github.com/museui/muse-ui",
+        "aHrefText": "museui / muse-ui",
+        "des": "Material Design UI library for Vuejs 2.0"
+    },
+    {
+        "aHref": "https://github.com/ole/whats-new-in-swift-4",
+        "aHrefText": "ole / whats-new-in-swift-4",
+        "des": "An Xcode playground showing off the new features in Swift 4.0."
+    },
+    {
+        "aHref": "https://github.com/GoogleChrome/workbox",
+        "aHrefText": "GoogleChrome / workbox",
+        "des": "Workbox is a collection of JavaScript libraries for Progressive Web Apps"
+    },
+    {
+        "aHref": "https://github.com/kshvmdn/fsql",
+        "aHrefText": "kshvmdn / fsql",
+        "des": "Search through your filesystem with SQL-esque queries."
+    },
+    {
+        "aHref": "https://github.com/jtesta/ssh-mitm",
+        "aHrefText": "jtesta / ssh-mitm",
+        "des": "SSH man-in-the-middle tool"
+    },
+    {
+        "aHref": "https://github.com/mavoweb/mavo",
+        "aHrefText": "mavoweb / mavo",
+        "des": "Create web applications entirely by writing HTML and CSS!"
+    },
+    {
+        "aHref": "https://github.com/mariusandra/insights",
+        "aHrefText": "mariusandra / insights",
+        "des": "Self-hosted \"SQL-not-required\" data analytics and visualisation tool."
+    },
+    {
+        "aHref": "https://github.com/angelolloqui/SwiftKotlin",
+        "aHrefText": "angelolloqui / SwiftKotlin",
+        "des": "A tool to convert Swift code to Kotlin."
+    },
+    {
+        "aHref": "https://github.com/yandex/gixy",
+        "aHrefText": "yandex / gixy",
+        "des": "Nginx configuration static analyzer"
+    },
+    {
+        "aHref": "https://github.com/dlew/android-architecture-counter-sample",
+        "aHrefText": "dlew / android-architecture-counter-sample",
+        "des": "Sample app using Android architecture components"
+    },
+    {
+        "aHref": "https://github.com/vuejs/vue",
+        "aHrefText": "vuejs / vue",
+        "des": "A progressive, incrementally-adoptable JavaScript framework for building UI on the web."
+    },
+    {
+        "aHref": "https://github.com/wuapnjie/PoiShuhui-Kotlin",
+        "aHrefText": "wuapnjie / PoiShuhui-Kotlin",
+        "des": "一个用Kotlin写的简单漫画APP"
+    },
+    {
+        "aHref": "https://github.com/googlecreativelab/quickdraw-dataset",
+        "aHrefText": "googlecreativelab / quickdraw-dataset",
+        "des": "Documentation on how to access and use the Quick, Draw! Dataset."
+    },
+    {
+        "aHref": "https://github.com/firebase/firebase-js-sdk",
+        "aHrefText": "firebase / firebase-js-sdk",
+        "des": "Firebase Javascript SDK"
+    },
+    {
+        "aHref": "https://github.com/aalhour/awesome-compilers",
+        "aHrefText": "aalhour / awesome-compilers",
+        "des": "😎 A curated list of awesome resources on Compilers, Interpreters and Runtimes."
+    },
+    {
+        "aHref": "https://github.com/brentsimmons/JSONFeed",
+        "aHrefText": "brentsimmons / JSONFeed",
+        "des": "The JSONFeed.org website"
+    },
+    {
+        "aHref": "https://github.com/schollz/howmanypeoplearearound",
+        "aHrefText": "schollz / howmanypeoplearearound",
+        "des": "Count the number of people around you 👨‍👨‍👦 by monitoring wifi signals 📡"
+    },
+    {
+        "aHref": "https://github.com/wangjiegulu/kotlin-for-android-developers-zh",
+        "aHrefText": "wangjiegulu / kotlin-for-android-developers-zh",
+        "des": "Kotlin for android developers in chinese."
+    },
+    {
+        "dataLength": 25
+    }
+]

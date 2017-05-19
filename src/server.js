@@ -5,6 +5,55 @@ const cheerio = require('cheerio');
 const url = require('url');
 const fs = require('fs');
 
+const options = { flags: 'w+',
+                encoding: 'utf8',
+                mode: 0666,
+                autoClose: false };
+/*
+* 判断2个数组属性和值是否相等
+*/
+function isObjectValueEqual(a,b) {
+    var aProps = Object.getOwnPropertyNames(a);
+    var bProps = Object.getOwnPropertyNames(b);
+    if(aProps.length !== aProps.length) {
+        return false;
+    }
+    for(val of aProps) {
+        if(a[val] !== b[val]) {
+            return false;
+        }
+    }
+    return true;
+}
+/*
+* 判断所读数据val与data是否相同,不同则重写
+*/
+function readerStreamFun(val, data) {
+    var readerStream = fs.createReadStream(val);
+    readerStream.on('readable', () => {
+        /*
+         * readerStreamFile为什么会先返回数据,之后返回为null???
+         */
+        var readerStreamFile = readerStream.read();
+        var readerStreamFileUtf8;
+        if (readerStreamFile !== null) {
+            readerStreamFileUtf8 = JSON.parse(readerStreamFile.toString('utf8'));
+            if (!isObjectValueEqual(readerStreamFileUtf8, data)) {
+                var writeStream = fs.createWriteStream(val, options);
+                writeStream.write(JSON.stringify(data, null, 4));
+                writeStream.end();
+                writeStream.on('finish', () => {
+                    console.error('All writes are now complete.');
+                });
+            };
+        }
+    });
+    readerStream.on('end', () => {
+        console.log('end');
+    });
+}
+
+
 http.createServer(function(req, res) {
     var urlDecode = urlencode2.decode(req.url,'gbk');
     var getUrl = url.parse(urlDecode,true);
@@ -21,6 +70,9 @@ http.createServer(function(req, res) {
     var selcted = (getUrl.query).since;
     var req_url = "https://github.com/trending/" + slashToQueMarkCon + "?since=" + selcted;
     let listArry = [];
+
+
+
     request_.get(req_url,
         function(error, response_, body) {
             if (!error && response_.statusCode == 200) {
@@ -45,6 +97,7 @@ http.createServer(function(req, res) {
                 })
                 listArry.push({dataLength: dataLength});
                 programmingLanguageArry.unshift('All-Language');
+                programmingLanguageArry.length = 5;
                 /*
                 * All languages
                 */
@@ -66,26 +119,36 @@ http.createServer(function(req, res) {
 
                 var writeListPath = __dirname + '/dataLanguages/' + slashToQueMarkCon + '_' + selcted + '.json';
                 var writeLanguagePath2 = __dirname + '/dataLanguages/languages.json';
-                var options = { flags: 'w+',
-                                encoding: 'utf8',
-                                mode: 0666 };
+                var allWriteJson = [];
+                allWriteJson.push(writeListPath);
+                allWriteJson.push(writeLanguagePath2);
+                /*
+                * 遍历数组allWriteJson,第一判断是否有文件,无文件则新建
+                * 有文件,则比较文件内容与对应的数据是否相同,不同则重写
+                */
+               for(let val of allWriteJson) {
+                        if(!fs.existsSync(val)) {
+                            if(val === writeLanguagePath2) {
+                                var writeStream = fs.createWriteStream(val,options);  
+                                writeStream.write(JSON.stringify(programmingLanguageArry, null, 4));                               
+                            } else {
+                                var writeStream = fs.createWriteStream(val,options);  
+                                writeStream.write(JSON.stringify(listArry, null, 4));                                 
+                            }
+                            writeStream.end();
+                            writeStream.on('finish', () => {
+                                console.error('All writes are now complete.');
+                            });                            
+                        } else {
+                            if(val === writeLanguagePath2) {
+                                readerStreamFun(val, programmingLanguageArry)
+                            } else {
+                                readerStreamFun(val, listArry)
+                            }
+                        }
+               }
 
-                fs.exists(writeLanguagePath2, function(result) { 
-                    // if(!result) {
-                    var writeStream = fs.createWriteStream(writeLanguagePath2,options);
-                    writeStream.write(JSON.stringify(programmingLanguageArry, null, 4));
-                    // }
-                    var writeStream = fs.createWriteStream(writeListPath,options);
-                    writeStream.write(JSON.stringify(listArry, null, 4)); 
-                    writeStream.end('This is the end\n');
-                    writeStream.on('finish', () => {
-                        console.error('All writes are now complete.');
-                    });                     
-                });
-
-                // console.log(Object.prototype.toString.call(listArry))
-                // console.log(listArry)
-                res.end(JSON.stringify(listArry) + '\n');
+               res.end(JSON.stringify(listArry) + '\n');
             } else {
                 console.log(error)
             }

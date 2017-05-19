@@ -1,0 +1,130 @@
+[
+    {
+        "aHref": "https://github.com/kshvmdn/fsql",
+        "aHrefText": "kshvmdn / fsql",
+        "des": "Search through your filesystem with SQL-esque queries."
+    },
+    {
+        "aHref": "https://github.com/yandex/gixy",
+        "aHrefText": "yandex / gixy",
+        "des": "Nginx configuration static analyzer"
+    },
+    {
+        "aHref": "https://github.com/JetBrains/kotlin",
+        "aHrefText": "JetBrains / kotlin",
+        "des": "The Kotlin Programming Language"
+    },
+    {
+        "aHref": "https://github.com/schollz/howmanypeoplearearound",
+        "aHrefText": "schollz / howmanypeoplearearound",
+        "des": "Count the number of people around you 👨‍👨‍👦 by monitoring wifi signals 📡"
+    },
+    {
+        "aHref": "https://github.com/aalhour/awesome-compilers",
+        "aHrefText": "aalhour / awesome-compilers",
+        "des": "😎 A curated list of awesome resources on Compilers, Interpreters and Runtimes."
+    },
+    {
+        "aHref": "https://github.com/getinsomnia/insomnia",
+        "aHrefText": "getinsomnia / insomnia",
+        "des": "The most intuitive cross-platform REST API Client 😴"
+    },
+    {
+        "aHref": "https://github.com/nikitavoloboev/knowledge-map",
+        "aHrefText": "nikitavoloboev / knowledge-map",
+        "des": "🌍 Search Interactive Mind Maps to learn anything"
+    },
+    {
+        "aHref": "https://github.com/desktop/desktop",
+        "aHrefText": "desktop / desktop",
+        "des": "Simple collaboration from your desktop"
+    },
+    {
+        "aHref": "https://github.com/dgraph-io/badger",
+        "aHrefText": "dgraph-io / badger",
+        "des": "Fastest key/value store in Go."
+    },
+    {
+        "aHref": "https://github.com/kishikawakatsumi/SpreadsheetView",
+        "aHrefText": "kishikawakatsumi / SpreadsheetView",
+        "des": "Full configurable spreadsheet view user interfaces for iOS applications. With this framework, you can easily create complex layouts like schedule, gantt chart or timetable as if you are using Excel."
+    },
+    {
+        "aHref": "https://github.com/tensorflow/tensorflow",
+        "aHrefText": "tensorflow / tensorflow",
+        "des": "Computation using data flow graphs for scalable machine learning"
+    },
+    {
+        "aHref": "https://github.com/mezod/awesome-indie",
+        "aHrefText": "mezod / awesome-indie",
+        "des": "Resources for independent developers to make money"
+    },
+    {
+        "aHref": "https://github.com/Microsoft/TypeScript-React-Starter",
+        "aHrefText": "Microsoft / TypeScript-React-Starter",
+        "des": "A starter template for TypeScript and React with a detailed README describing how to use the two together."
+    },
+    {
+        "aHref": "https://github.com/eventbrite/britecharts",
+        "aHrefText": "eventbrite / britecharts",
+        "des": "Client-side reusable Charting Library based on D3.js v4 that allows easy and intuitive use of charts and components that can be composed together creating amazing visualizations."
+    },
+    {
+        "aHref": "https://github.com/ngryman/speedracer",
+        "aHrefText": "ngryman / speedracer",
+        "des": "🏎 Collect performance metrics for your library/application."
+    },
+    {
+        "aHref": "https://github.com/Nonchalant/AppIcon",
+        "aHrefText": "Nonchalant / AppIcon",
+        "des": "AppIcon generates *.appiconset contains each resolution image for iOS"
+    },
+    {
+        "aHref": "https://github.com/vuejs/vue",
+        "aHrefText": "vuejs / vue",
+        "des": "A progressive, incrementally-adoptable JavaScript framework for building UI on the web."
+    },
+    {
+        "aHref": "https://github.com/xmuSistone/android-pile-layout",
+        "aHrefText": "xmuSistone / android-pile-layout",
+        "des": "An abnormal horizontal ListView-like pile layout."
+    },
+    {
+        "aHref": "https://github.com/misterch0c/shadowbroker",
+        "aHrefText": "misterch0c / shadowbroker",
+        "des": "The Shadow Brokers \"Lost In Translation\" leak"
+    },
+    {
+        "aHref": "https://github.com/mavoweb/mavo",
+        "aHrefText": "mavoweb / mavo",
+        "des": "Create web applications entirely by writing HTML and CSS!"
+    },
+    {
+        "aHref": "https://github.com/jingweno/godzilla",
+        "aHrefText": "jingweno / godzilla",
+        "des": "Godzilla is a ES2015 to Go source code transpiler and runtime"
+    },
+    {
+        "aHref": "https://github.com/facebook/react",
+        "aHrefText": "facebook / react",
+        "des": "A declarative, efficient, and flexible JavaScript library for building user interfaces."
+    },
+    {
+        "aHref": "https://github.com/jtesta/ssh-mitm",
+        "aHrefText": "jtesta / ssh-mitm",
+        "des": "SSH man-in-the-middle tool"
+    },
+    {
+        "aHref": "https://github.com/huanglizhuo/kotlin-in-chinese",
+        "aHrefText": "huanglizhuo / kotlin-in-chinese",
+        "des": "kotlin 官方文档"
+    },
+    {
+        "aHref": "https://github.com/googlesamples/android-architecture-components",
+        "aHrefText": "googlesamples / android-architecture-components",
+        "des": ""
+    },
+    {
+        "dataLength": 25
+    }
+]
