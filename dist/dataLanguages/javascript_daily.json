@@ -1,0 +1,130 @@
+[
+    {
+        "aHref": "https://github.com/GoogleChrome/workbox",
+        "aHrefText": "GoogleChrome / workbox",
+        "des": "Workbox is a collection of JavaScript libraries for Progressive Web Apps"
+    },
+    {
+        "aHref": "https://github.com/mavoweb/mavo",
+        "aHrefText": "mavoweb / mavo",
+        "des": "Create web applications entirely by writing HTML and CSS!"
+    },
+    {
+        "aHref": "https://github.com/mariusandra/insights",
+        "aHrefText": "mariusandra / insights",
+        "des": "Self-hosted \"SQL-not-required\" data analytics and visualisation tool."
+    },
+    {
+        "aHref": "https://github.com/firebase/firebase-js-sdk",
+        "aHrefText": "firebase / firebase-js-sdk",
+        "des": "Firebase Javascript SDK"
+    },
+    {
+        "aHref": "https://github.com/vuejs/vue",
+        "aHrefText": "vuejs / vue",
+        "des": "A progressive, incrementally-adoptable JavaScript framework for building UI on the web."
+    },
+    {
+        "aHref": "https://github.com/facebook/react",
+        "aHrefText": "facebook / react",
+        "des": "A declarative, efficient, and flexible JavaScript library for building user interfaces."
+    },
+    {
+        "aHref": "https://github.com/pubkey/rxdb",
+        "aHrefText": "pubkey / rxdb",
+        "des": "💻 📱 Client-Side Database for Browsers, NodeJS, electron, cordova, react-native and every other javascript-runtime ❗️"
+    },
+    {
+        "aHref": "https://github.com/diegomura/react-pdf",
+        "aHrefText": "diegomura / react-pdf",
+        "des": "Create PDF files using React"
+    },
+    {
+        "aHref": "https://github.com/facebookincubator/create-react-app",
+        "aHrefText": "facebookincubator / create-react-app",
+        "des": "Create React apps with no build configuration."
+    },
+    {
+        "aHref": "https://github.com/getinsomnia/insomnia",
+        "aHrefText": "getinsomnia / insomnia",
+        "des": "The most intuitive cross-platform REST API Client 😴"
+    },
+    {
+        "aHref": "https://github.com/airbnb/javascript",
+        "aHrefText": "airbnb / javascript",
+        "des": "JavaScript Style Guide"
+    },
+    {
+        "aHref": "https://github.com/twbs/bootstrap",
+        "aHrefText": "twbs / bootstrap",
+        "des": "The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web."
+    },
+    {
+        "aHref": "https://github.com/EastWorld/wechat-app-mall",
+        "aHrefText": "EastWorld / wechat-app-mall",
+        "des": "微信小程序商城，微信小程序微店"
+    },
+    {
+        "aHref": "https://github.com/webpack/webpack",
+        "aHrefText": "webpack / webpack",
+        "des": "A bundler for javascript and friends. Packs many modules into a few bundled assets. Code Splitting allows to load parts for the application on demand. Through \"loaders,\" modules can be CommonJs, AMD, ES6 modules, CSS, Images, JSON, Coffeescript, LESS, ... and your custom stuff."
+    },
+    {
+        "aHref": "https://github.com/mapbox/delaunator",
+        "aHrefText": "mapbox / delaunator",
+        "des": "A really fast JavaScript library for Delaunay triangulation of 2D points"
+    },
+    {
+        "aHref": "https://github.com/getify/You-Dont-Know-JS",
+        "aHrefText": "getify / You-Dont-Know-JS",
+        "des": "A book series on JavaScript. @YDKJS on twitter."
+    },
+    {
+        "aHref": "https://github.com/facebook/react-native",
+        "aHrefText": "facebook / react-native",
+        "des": "A framework for building native apps with React."
+    },
+    {
+        "aHref": "https://github.com/callemall/material-ui",
+        "aHrefText": "callemall / material-ui",
+        "des": "React Components that Implement Google's Material Design."
+    },
+    {
+        "aHref": "https://github.com/nodejs/node",
+        "aHrefText": "nodejs / node",
+        "des": "Node.js JavaScript runtime ✨🐢🚀✨"
+    },
+    {
+        "aHref": "https://github.com/zeit/next.js",
+        "aHrefText": "zeit / next.js",
+        "des": "Framework for server-rendered React apps"
+    },
+    {
+        "aHref": "https://github.com/lovell/sharp",
+        "aHrefText": "lovell / sharp",
+        "des": "High performance Node.js image processing, the fastest module to resize JPEG, PNG, WebP and TIFF images. Uses the libvips library."
+    },
+    {
+        "aHref": "https://github.com/metabase/metabase",
+        "aHrefText": "metabase / metabase",
+        "des": "The simplest, fastest way to get business intelligence and analytics to everyone in your company 😋"
+    },
+    {
+        "aHref": "https://github.com/kitze/sizzy",
+        "aHrefText": "kitze / sizzy",
+        "des": "A tool for developing responsive websites crazy-fast"
+    },
+    {
+        "aHref": "https://github.com/nccgroup/wssip",
+        "aHrefText": "nccgroup / wssip",
+        "des": "Application for capturing, modifying and sending custom WebSocket data from client to server and vice versa."
+    },
+    {
+        "aHref": "https://github.com/iview/iview-cli",
+        "aHrefText": "iview / iview-cli",
+        "des": "Create an iView project in visual way"
+    },
+    {
+        "dataLength": 25
+    }
+]
