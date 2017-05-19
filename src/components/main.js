@@ -439,7 +439,7 @@ class List extends React.Component {
 			dataCon.map(function(v, i) {
 				let index = i + 1;
 				let listHtml = <Panel header={v.aHrefText} key={index} style={customPanelStyle}>
-					<p><a href={v.aHref} target='_blank'>{v.des}</a></p>
+					<p><a href={v.aHref}>{v.des}</a></p>
 					</Panel>;
 				dataArry.push(listHtml);
 				/* 把所有json对象的下标都加载到扩展数组中collapseActiveKey*/
