@@ -169,7 +169,7 @@ class Language extends React.Component {
 	}
 	/*初始化渲染执行之后立刻调用一次*/
 	componentDidMount() {
-		let source = $.get('../dataLanguages/languages.json');
+		let source = $.get('http://localhost/dist/dataLanguages/languages.json');
 		source.then(
 			value => {
 				this.setState({
@@ -284,7 +284,7 @@ class List extends React.Component {
 		/* let initStartTime = Date.now();*/
 		let language = (this.props.language).toLowerCase();
 		// let source = $.get('http://localhost:8888/' + language + '?since=' + this.props.currentTab);
-		let source = $.get('../dataLanguages/' + language + '_' + this.props.currentTab + '.json');
+		let source = $.get('http://localhost/dataLanguages/' + language + '_' + this.props.currentTab + '.json');
 		source.then(
 			value => {
 				/* 计算数据从服务器请求回来后的加载时间（进度）*/
@@ -361,7 +361,7 @@ class List extends React.Component {
 		this.setState({shoWarnig: false});
 		let language = (nextProps.language).toLowerCase();
 		// let source = $.get('http://localhost:8888/' + language + '?since=' + this.props.currentTab);
-		let source = $.get('../dataLanguages/' + language + '_' + this.props.currentTab + '.json');
+		let source = $.get('http://localhost/dist/dataLanguages/' + language + '_' + this.props.currentTab + '.json');
 		source.then(
 			value => {
 				this.setState({
